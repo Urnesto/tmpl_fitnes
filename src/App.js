@@ -3,17 +3,18 @@ import Navbar from "./components/Navbar";
 import { Logo } from "./components/Reusable/logo";
 function App() {
 
+
+
+  const [isLoading, setLoading] = useState(false);
+    useEffect(() =>{
+      PreloaderHandler()
+  })
+
   function PreloaderHandler(){
     setTimeout(()=>{
         setLoading(true)
     },1000)
 }
-
-  const [isLoading, setLoading] = useState(false);
-    useEffect(() =>{
-      PreloaderHandler()
-      
-  })
 
 
   return (
