@@ -1,7 +1,7 @@
 import { useState } from "react";
 import close from "../../assets/icons/close.svg";
 import menu from "../../assets/icons/menu.svg";
-import logo from "../../assets/icons/logo192.png";
+import logo from "../../assets/images/logo.svg";
 export const navLinks = [
   {
     id: "home",
@@ -38,9 +38,12 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <nav className="w-8/12  flex items-center justify-center py-6 navbar">
+      <nav className="w-11/12 lg:w-8/12  flex items-center justify-center py-6 navbar">
         <img src={logo} className="w-10 h-10" />
-        <h1 className="text-3xl text-gray-400">Logo</h1>
+        <div className="mx-2 flex flex-col text-base text-white font-semibold">
+          <a>TMPL</a>
+          <a>FITNESS</a>
+        </div>
         {/* Desktop Navigation */}
         <ul className="list-none sm:flex hidden justify-end items-center flex-1">
           {navLinks.map((nav, index) => (
@@ -53,11 +56,10 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
-          <li className="font-medium mx-10 cursor-pointer text-[16px] text-gray-400 hover:text-white">
-            <a>Позвонить</a>
-          </li>
         </ul>
-
+        <li className="font-medium list-none mx-10 cursor-pointer underline underline-offset-8 decoration-tmpl-purple text-[16px] text-white hover:text-tmpl-purple">
+          <a className="">Позвонить</a>
+        </li>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -76,17 +78,13 @@ const Navbar = () => {
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={` font-medium cursor-pointer text-[16px] 
-                  hover:text-white text-gray-400 ${
-                    index === navLinks.length - 1 ? "mb-0" : "mb-4"
-                  }`}
+                  className={`font-normal cursor-pointer text-[16px] 
+            hover:text-white text-gray-400
+               ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
-              <li className="font-medium  cursor-pointer text-[16px] text-gray-400 hover:text-white">
-                <a>Позвонить</a>
-              </li>
             </ul>
           </div>
         </div>
