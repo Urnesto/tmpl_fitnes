@@ -1,8 +1,8 @@
 import { useState } from "react";
 import close from "../../assets/icons/close.svg";
 import menu from "../../assets/icons/menu.svg";
-import logo from "../../assets/images/logo.svg";
-export const navLinks = [
+import { Logo } from "../Reusable/logo";
+ const navLinks = [
   {
     id: "home",
     title: "Главная",
@@ -39,11 +39,7 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-center">
       <nav className="w-11/12 lg:w-8/12  flex items-center justify-center py-6 navbar">
-        <img src={logo} className="w-10 h-10" />
-        <div className="mx-2 flex flex-col text-base text-white font-semibold">
-          <a>TMPL</a>
-          <a>FITNESS</a>
-        </div>
+        <Logo size={'w-10 h-10'} />
         {/* Desktop Navigation */}
         <ul className="list-none sm:flex hidden justify-end items-center flex-1">
           {navLinks.map((nav, index) => (
