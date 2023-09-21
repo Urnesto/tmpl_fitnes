@@ -21,7 +21,7 @@ const navLinks = [
     title: "Расписание",
   },
   {
-    id: "payment",
+    id: "pricing",
     title: "Стоимость",
   },
   {
