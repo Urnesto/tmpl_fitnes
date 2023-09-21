@@ -1,14 +1,9 @@
 import { useState } from "react";
 import close from "../../assets/icons/close.svg";
 import menu from "../../assets/icons/menu.svg";
-<<<<<<< HEAD
 import { Logo } from "../Reusable/logo";
- const navLinks = [
-=======
-import logo from "../../assets/images/logo.svg";
 
 const navLinks = [
->>>>>>> 07958a9800266931cfb5fcc2f5960ecc40f346d6
   {
     id: "home",
     title: "Главная",
