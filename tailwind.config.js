@@ -18,7 +18,10 @@ module.exports = {
         },
         tmpl: {
           purple: "#B35FCE",
-          gray: "#2F2D2F",
+          gray: {
+            50: "#2F2D2F",
+            100: "#9a9a9a",
+          },
         },
       },
     },

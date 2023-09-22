@@ -1,6 +1,8 @@
 import React from "react";
 import { Logo } from "../Reusable/logo";
 import logonfs from "../../assets/images/logonfs.png";
+import { Button } from "../Reusable/Button";
+
 const homeLinks = [
   {
     id: "home",
@@ -48,18 +50,14 @@ const adresLinks = [
 ];
 const Footer = () => {
   return (
-    <footer className="bg-tmpl-gray ">
+    <footer className="bg-tmpl-gray-50 ">
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex flex-row items-center justify-center lg:items-start lg:justify-normal">
               <Logo size={"w-12 h-12"} />
             </div>
-            <div className="flex items-center justify-center lg:items-start lg:justify-normal">
-              <button className="text-white my-5 lg:my-10 bg-tmpl-purple w-9/12 md:w-52 h-12 text-base uppercase rounded-3xl transition hover:bg-tmpl-purple/70">
-                оставить заявку
-              </button>
-            </div>
+            <Button btnText={"оставить заявку"} bg={"tmpl-purple"} />
           </div>
           <div className="grid grid-cols-1 gap-18 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
             <div className="text-left mx-5 lg:mx-0">

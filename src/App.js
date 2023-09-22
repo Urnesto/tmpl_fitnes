@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { Logo } from "./components/Reusable/logo";
 import Footer from "./components/Footer";
+import Section from "./components/Section";
 
 function App() {
   function PreloaderHandler() {
@@ -24,6 +25,7 @@ function App() {
           <Logo size={"w-14 h-14"} />
         </div>
       )}
+      <Section />
       <Footer />
     </div>
   );
