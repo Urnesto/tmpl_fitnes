@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="bg-black h-screen">
       {isLoading ? (
-        <div className="transition-opacity duration-400 ease-out opacity-0 hover:opacity-100">
+        <div className="transition-opacity duration-1000 ease-out opacity-0 hover:opacity-100">
           <Navbar />
           <Footer />
         </div>
