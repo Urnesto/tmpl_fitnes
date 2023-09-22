@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Logo } from "../Reusable/logo";
+import logonfs from "../../assets/images/logonfs.png";
 const homeLinks = [
   {
     id: "home",
@@ -26,55 +27,110 @@ const homeLinks = [
     title: "Стоимость",
   },
 ];
-
+const templLInks = [
+  { id: "templ", title: "ООО «Тэмпл»" },
+  { id: "Tin", title: "ИНН 9726033443" },
+  { id: "Ogrn", title: "ОГРН 1227700919863" },
+  { id: "Director", title: "Ген. Директор Зайцев Игорь Алексеевич" },
+];
+const adresLinks = [
+  {
+    id: "adres",
+    title: "Адреса",
+    subAdress: [
+      "Люблинская 76к4",
+      "Каширское шоссе 65к3",
+      "Смоленская площадь 3 (4 этаж)",
+    ],
+  },
+  { id: "mobile_app", title: "Мобильное приложение" },
+  { id: "contacts", title: "Контакты" },
+];
 const Footer = () => {
   return (
-    <footer class="bg-white">
-      <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <footer className="bg-tmpl-gray ">
+      <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <p>Logo</p>
+            <div className="flex flex-row items-center justify-center lg:items-start lg:justify-normal">
+              <Logo size={"w-12 h-12"} />
+            </div>
+            <div className="flex items-center justify-center lg:items-start lg:justify-normal">
+              <button className="text-white my-5 lg:my-10 bg-tmpl-purple w-9/12 md:w-52 h-12 text-base uppercase rounded-3xl transition hover:bg-tmpl-purple/70">
+                оставить заявку
+              </button>
+            </div>
           </div>
-
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
-            <div class="text-center sm:text-left">
-              <p class="text-lg font-medium text-gray-900">About Us</p>
-              <ul class="mt-8 space-y-4 text-sm">
+          <div className="grid grid-cols-1 gap-18 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
+            <div className="text-left mx-5 lg:mx-0">
+              <ul className="space-y-4 text-sm">
                 {homeLinks.map((home, index) => (
                   <li key={home.id}>
-                    <a class="text-gray-700 transition hover:text-gray-700/75">
+                    <a className="text-gray-400 transition hover:text-white">
                       {home.title}
                     </a>
                   </li>
                 ))}
-                <li></li>
               </ul>
+            </div>
+            <div className="text-left mx-5 lg:mx-0">
+              <ul className="space-y-4 text-sm">
+                {adresLinks.map((obj) => (
+                  <div key={obj.id}>
+                    <a className="text-gray-400 transition hover:text-white">
+                      {obj.title}
+                    </a>
+                    {obj.subAdress && (
+                      <ul className="list-disc text-tmpl-purple list-inside text-xs">
+                        {obj.subAdress.map((hobby, hobbyIndex) => (
+                          <li key={hobbyIndex}>
+                            <a className="text-gray-400">{hobby}</a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </ul>
+            </div>
+            <div className="text-left mx-5 lg:mx-0">
+              <ul className="text-sm">
+                {templLInks.map((templ, index) => (
+                  <li key={templ.id}>
+                    <a className="text-gray-400">{templ.title}</a>
+                  </li>
+                ))}
+              </ul>
+              <div className="mx-5 lg:mx-0">
+                <img className="w-14 h-14 my-5" src={logonfs}></img>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="mt-12 border-t border-gray-100 pt-6">
-          <div class="text-center sm:flex sm:justify-between sm:text-left">
-            <p class="text-sm text-gray-500">
-              <span class="block sm:inline">All rights reserved.</span>
-
+        <div className="mt-12 border-t border-gray-100 pt-6">
+          <div className="sm:flex sm:justify-between text-left">
+            <p className="text-sm text-gray-500">
               <a
-                class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+                className="inline-block text-gray-400 underline transition hover:text-white"
                 href="/"
               >
-                Terms & Conditions
+                Политика конфиденциальности
               </a>
               <span>&middot;</span>
-              <a
-                class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
-                href="/"
-              >
-                Privacy Policy
+              <a className="inline-block text-gray-500 text-xs" href="/">
+                Информация об услугах и ценах на сайте ООО «Тэмпл» не является
+                публичной офертой и носит ознакомительный характер
               </a>
             </p>
-            <p class="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
-              &copy; 2022 Company Name
-            </p>
+            <div className="text-gray-400 mt-4 text-sm sm:order-last sm:mt-0 ">
+              <p>
+                &copy; 2023 Общество с ограниченной ответственностью «Тэмпл»
+              </p>
+              <p>
+                Общество с ограниченной ответственностью «Зеленая территория»
+              </p>
+            </div>
           </div>
         </div>
       </div>
