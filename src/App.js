@@ -17,7 +17,7 @@ function App() {
   });
 
   return (
-    <div className="bg-black h-screen">
+    <div className="bg-black h-full">
       {isLoading ? (
         <Navbar />
       ) : (
