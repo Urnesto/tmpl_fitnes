@@ -40,8 +40,8 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-center">
       <nav className="w-11/12 lg:w-8/12  flex items-center justify-center py-6 navbar">
-        <Logo size={'w-10 h-10'} />
-      
+        <Logo size={"w-10 h-10"} />
+
         {/* Desktop Navigation */}
         <ul className="list-none  lg:flex hidden justify-end items-center flex-1">
           {navLinks.map((nav, index) => (
@@ -60,8 +60,7 @@ const Navbar = () => {
         </li>
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
-            src={toggle ? close : menu}
-            alt="menu"
+            src={toggle ? "close" : "menu"}
             className="w-6 h-6 object-contain"
             onClick={() => setToggle(!toggle)}
           />

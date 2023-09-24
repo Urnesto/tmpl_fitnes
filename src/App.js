@@ -21,7 +21,7 @@ function App() {
   // hover : 100, добавить анимацию к родительскому диву
 
   return (
-    <div className="bg-black h-screen">
+    <div className="bg-black h-full">
       {isLoading ? (
         <div className="transition-opacity duration-1000 ease-out opacity-100 "> 
           <Navbar />
