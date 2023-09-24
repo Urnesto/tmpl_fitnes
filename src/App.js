@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import { Logo } from "./components/Reusable/logo";
 import Footer from "./components/Footer";
+import Section from "./components/Section";
 
 
 
@@ -17,11 +18,12 @@ function App() {
   useEffect(() => {
     PreloaderHandler();
   });
+  // hover : 100, добавить анимацию к родительскому диву
 
   return (
     <div className="bg-black h-screen">
       {isLoading ? (
-        <div className="transition-opacity duration-1000 ease-out opacity-0 hover:opacity-100">
+        <div className="transition-opacity duration-1000 ease-out opacity-100 "> 
           <Navbar />
           <Footer />
         </div>
@@ -31,6 +33,9 @@ function App() {
           <Logo size={"w-14 h-14"}/>
         </div>
       )}
+
+      <Section />
+      <Footer />
     </div>
   );
 }
