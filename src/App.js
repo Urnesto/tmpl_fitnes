@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import { Logo } from "./components/Reusable/logo";
 import Footer from "./components/Footer";
 import Section from "./components/Section";
+import ImageSection from "./components/ImagesSection";
+import FreeSection from "./components/FreeSection";
 
 function App() {
   function PreloaderHandler() {
@@ -17,7 +19,7 @@ function App() {
   });
 
   return (
-    <div className="bg-black h-full">
+    <div className=" bg-black h-full">
       {isLoading ? (
         <Navbar />
       ) : (
@@ -25,7 +27,11 @@ function App() {
           <Logo size={"w-14 h-14"} />
         </div>
       )}
-      <Section />
+      <div className=" mx-3 lg:mx-5">
+        <Section />
+        <ImageSection />
+        <FreeSection />
+      </div>
       <Footer />
     </div>
   );

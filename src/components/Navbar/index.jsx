@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <nav className="w-11/12 lg:w-8/12  flex items-center justify-center py-6 navbar">
+      <nav className="w-11/12 lg:w-8/12 max-w-7xl flex items-center justify-center py-6 navbar">
         <Logo size={"w-10 h-10"} />
 
         {/* Desktop Navigation */}

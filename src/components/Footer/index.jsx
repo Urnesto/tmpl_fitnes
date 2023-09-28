@@ -54,7 +54,7 @@ const Footer = () => {
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <div className="flex flex-row items-center justify-center lg:items-start lg:justify-normal">
+            <div className="flex flex-row items-center justify-center lg:items-start my-5 lg:justify-normal">
               <Logo size={"w-12 h-12"} />
             </div>
             <Button btnText={"оставить заявку"} bg={"tmpl-purple"} />
