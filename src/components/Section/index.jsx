@@ -37,8 +37,8 @@ const Section = () => {
             </h1>
             <div className="uppercase e lg:text-3xl text-center lg:text-start text-tmpl-purple">
               Premium
-              <a className="text-tmpl-gray-100  mx-2">фитнес в москве</a>
-              <a className="text-white block">БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ</a>
+              <a className="text-tmpl-gray-100 mx-2" href="#">фитнес в москве</a>
+              <a  href="#" className="text-white block">БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ</a>
             </div>
           </div>
           <div className=" lg:row-span-2 lg:col-end-7 flex text-end ">

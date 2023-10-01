@@ -100,7 +100,7 @@ const Navbar = () => {
               !isVisibleBurger ? "hidden" : "flex"
             } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-full rounded-xl sidebar bg-black h-screen`}
           >
-            <ul className="list-none flex justify-start items-start  flex-col mx-12 ">
+            <ul className="list-none flex justify-start  items-start flex-col mx-12 ">
              {/* Nav's button searcher */}
               {navLinks.map((nav, index) => (
                 <li
@@ -112,7 +112,7 @@ const Navbar = () => {
                 </li>
               ))}
               {/* Phone searcher */}
-              <div className="justify-end items-end "> 
+              <div className="justify-end items-end flex-1 "> 
               {numbersPhone.map((phone, index) => (
                 <li
                   key={phone.id}
