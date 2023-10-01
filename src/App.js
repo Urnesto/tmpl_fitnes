@@ -20,28 +20,38 @@ function App() {
     PreloaderHandler();
   });
   // hover : 100, добавить анимацию к родительскому диву
+  const [isToggleModal, setToggleModal] = useState(false)
+
+  const ToggleModal = () => {
+    setToggleModal(!isToggleModal)
+  }
+
+  useEffect(() => {
+    PreloaderHandler();
+  });
 
   return (
     <div className=" bg-black h-full ">
-      {isLoading ? (
-        <>
-          <Navbar />
-          <div className=" mx-3 lg:mx-5 ">
-            <Section />
-            <ImageSection />
-            <FreeSection />
-            <InfoSection />
-          </div>
-          <Footer />
-          {/* <ModalWindow/> */}
-        </>
-      ) : (
-        <div className="h-screen flex items-center  justify-center animate-pulse ">
-          <Logo size={"w-14 h-14"} />
-        </div>
-      )}
+    {isLoading ? (
+      <>
+        <Navbar />
+        <div className=" mx-3 lg:mx-5 ">
+      <Section toggleModal={ToggleModal} />
+      <ImageSection />
+      <FreeSection />
+      <InfoSection />
     </div>
-  );
-}
+    <Footer />
+      {isToggleModal? <ModalWindow toggleModal={ToggleModal} />: <> </>   }
+      </>
+      
+    ) : (
+      <div className="h-screen flex items-center  justify-center animate-pulse ">
+        <Logo size={"w-14 h-14"} />
+      </div>
+    )}
+    
+  </div>
+)}
 
 export default App;
