@@ -63,6 +63,11 @@ const Navbar = () => {
     toggleScroll(scroll);
     setVisibleBurger(!isVisibleBurger);
   };
+  
+
+  const test = () => {
+
+  }
 
   return (
     <div className="flex items-center justify-center">
@@ -122,11 +127,11 @@ const Navbar = () => {
                 ))}
                  <ul className=" sm:mt-8 md:mt-8">
                 <li>
-                  <a href="https://yandex.ru/maps/213/moscow/house/lyublinskaya_ulitsa_76k4/Z04YcQRhTEMOQFtvfXp3c3VhbA==/?ll=37.731569%2C55.662928&z=17.13" className="md:text-2xl sm:text-lg text-gray-400 hover:text-white sm:text-xs">Мы находимся по адресу: Люблинская улица, 76к4, Москва, 109382</a> 
+                  <a href="https://yandex.ru/maps/213/moscow/?ll=37.731599%2C55.662936&mode=poi&poi%5Bpoint%5D=37.731344%2C55.663121&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D91033436195&z=19.52" className="md:text-2xl sm:text-lg text-gray-400 hover:text-white sm:text-xs">Мы находимся по адресу: Люблинская улица, 76к4, Москва, 109382</a> 
                 </li>
               </ul>
                 <div className="w-full mt-4 ">
-                  <Button className bg={"tmpl-purple"}>
+                  <Button handler={()=> test()} className bg={"tmpl-purple"}>
                     Оставить заявку
                   </Button>
                 </div>

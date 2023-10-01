@@ -22,7 +22,15 @@ function App() {
   const [isToggleModal, setToggleModal] = useState(false)
 
   const ToggleModal = () => {
-    setToggleModal(!isToggleModal)
+    if(!isToggleModal){
+      document.body.style.overflow = "hidden";
+      setToggleModal(!isToggleModal)
+    }else{
+      document.body.style.overflow = "auto";
+      setToggleModal(!isToggleModal)
+    }
+    
+
   }
 
   useEffect(() => {
