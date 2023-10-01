@@ -6,7 +6,7 @@ import Section from "./components/Section";
 import ImageSection from "./components/ImagesSection";
 import FreeSection from "./components/FreeSection";
 import ModalWindow from "./components/common/Modal";
-
+import InfoSection from "./components/InfoSection";
 
 
 
@@ -32,9 +32,10 @@ function App() {
       <Section />
       <ImageSection />
       <FreeSection />
+      <InfoSection />
     </div>
     <Footer />
-    <ModalWindow/>
+    {/* <ModalWindow/> */}
       </>
       
     ) : (
