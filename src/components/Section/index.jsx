@@ -30,7 +30,7 @@ const Section = () => {
   return (
     <div className="flex items-center justify-center">
       <div className=" w-full lg:w-8/12 h-fit my-10 max-w-7xl">
-        <div className="grid lg:grid-cols-2 ">
+        <div className="grid lg:grid-cols-1 ">
           <div className="row-span-1 ">
             <h1 className="text-white my-3 uppercase text-center lg:text-start text-3xl lg:text-6xl font-bold">
               tmpl fitness
@@ -60,7 +60,7 @@ const Section = () => {
           </div>
           <div>
             <div className="flex gap-4 flex-col  xl:flex-row">
-              <div className="flex items-center justify-center  gap-4 lg:items-start lg:justify-normal">
+              <div className="flex items-center justify-center lg:mx-0 mx-5 gap-4 lg:items-start lg:justify-normal">
                 <Button bg={"tmpl-purple"}> купить абонемент </Button>
                 <Button border={"2"}>бесплатное занятие </Button>
               </div>

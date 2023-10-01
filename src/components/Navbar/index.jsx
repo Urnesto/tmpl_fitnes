@@ -91,7 +91,6 @@ const Navbar = () => {
             className="w-6 h-6 object-contain"
             onClick={() => functionCollector(isVisibleScroll)}
           />
-
           {/* Sidebar */}
           <div
             className={`${
