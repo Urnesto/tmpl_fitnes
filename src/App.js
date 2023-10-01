@@ -34,7 +34,7 @@ function App() {
     <div className=" bg-black h-full ">
     {isLoading ? (
       <>
-        <Navbar />
+        <Navbar toggleModal={ToggleModal} />
         <div className=" mx-3 lg:mx-5 ">
       <Section toggleModal={ToggleModal} />
       <ImageSection />

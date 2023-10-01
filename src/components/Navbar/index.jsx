@@ -46,7 +46,7 @@ const numbersPhone = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({toggleModal}) => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
   const [isVisibleScroll, setVisibleScroll] = useState(true);
   const toggleScroll = (currentScroll) => {
@@ -88,7 +88,7 @@ const Navbar = () => {
           ))}
         </ul>
         <li className="font-medium list-none mx-10 cursor-pointer underline underline-offset-8 decoration-tmpl-purple text-base text-white hover:text-tmpl-purple">
-          <a className="">Позвонить</a>
+          <a className="" onClick={()=>toggleModal()}>Позвонить</a>
         </li>
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
@@ -131,7 +131,7 @@ const Navbar = () => {
                 </li>
               </ul>
                 <div className="w-full mt-4 ">
-                  <Button handler={()=> test()} className bg={"tmpl-purple"}>
+                  <Button handler={()=> toggleModal()} className bg={"tmpl-purple"}>
                     Оставить заявку
                   </Button>
                 </div>
