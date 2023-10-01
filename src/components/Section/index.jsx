@@ -18,7 +18,26 @@ const sectionLinks = [
   },
 ];
 
-const Section = () => {
+const Section = ({props, toggleModal}) => {
+  
+  
+  const ButtonHandler = (arg) =>{
+    arg? AbobnimentBuy() : freeTrainigButton()  
+  
+  }
+
+  const AbobnimentBuy = () =>{
+    toggleModal();
+  }
+
+  const freeTrainigButton = () => {
+    window.scroll({
+      top: window.screen.height * 1.5,
+      behavior: 'smooth',
+    });
+  };
+
+
   return (
     <div className="flex items-center justify-center">
       <div className=" w-full lg:w-8/12 h-fit my-10 max-w-7xl">
@@ -53,8 +72,8 @@ const Section = () => {
           <div>
             <div className="flex gap-4 flex-col  xl:flex-row">
               <div className="flex items-center justify-center lg:mx-0 mx-5 gap-4 lg:items-start lg:justify-normal">
-                <Button bg={"tmpl-purple"}> купить абонемент </Button>
-                <Button border={"2"}>бесплатное занятие </Button>
+                <Button handler={()=>ButtonHandler('1')} bg={"tmpl-purple"}> купить абонемент </Button>
+                <Button handler={()=> ButtonHandler()} border={"2"}>бесплатное занятие </Button>
               </div>
             </div>
             <div className="mx-5 lg:mx-0 flex items-center flex-row">

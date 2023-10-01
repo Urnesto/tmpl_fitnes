@@ -1,8 +1,15 @@
-const ModalWindow = () => {
-  // Test
+import { useState } from "react";
+import modalImage from "./modal.png";
+const ModalWindow = ({toggleModal}) => {
+  
+    const ButtonHandler = () =>{
+        toggleModal()
+    }
+
   return (
-    <div className="fixed inset-0 bg-gray-400 bg-opacity-25 backdrop-blur-sm flex items-center justify-center overflow-x-hidden">
-      <div className="bg-black p-2 rounded w-1/3 h-3/5">
+    <div  className='fixed inset-0 bg-gray-400 bg-opacity-25 backdrop-blur-sm flex items-center justify-center'>
+      <div className="bg-black  rounded w-1/3 h-3/5">
+      <img src={modalImage} alt="" className="w-screen pb-4 " />
         <h1 className="font-semibold text-center text-4xl text-white">
           Оставить заявку
         </h1>
@@ -31,6 +38,7 @@ const ModalWindow = () => {
         </div>
         <div className="text-center">
           <button className="px-5 py-2  bg-gray-700 rounded">Sign in</button>
+             <button className="px-5 py-2  bg-gray-700 rounded" onClick={()=> ButtonHandler()}> X </button>
         </div>
       </div>
     </div>

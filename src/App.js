@@ -19,24 +19,34 @@ function App() {
   }
 
   const [isLoading, setLoading] = useState(false);
+  const [isToggleModal, setToggleModal] = useState(false)
+
+  const ToggleModal = () => {
+    setToggleModal(!isToggleModal)
+  }
+
   useEffect(() => {
     PreloaderHandler();
   });
   // hover : 100, добавить анимацию к родительскому диву
 
+
+ 
+
+  
   return (
     <div className=" bg-black h-full ">
     {isLoading ? (
       <>
         <Navbar />
         <div className=" mx-3 lg:mx-5 ">
-      <Section />
+      <Section toggleModal={ToggleModal} />
       <ImageSection />
       <FreeSection />
       <InfoSection />
     </div>
     <Footer />
-    {/* <ModalWindow/> */}
+      {isToggleModal? <ModalWindow toggleModal={ToggleModal} />: <> </>   }
       </>
       
     ) : (
