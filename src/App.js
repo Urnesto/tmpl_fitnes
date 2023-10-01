@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import { Logo } from "./components/Reusable/logo";
 import Footer from "./components/Footer";
 import Section from "./components/Section";
+import ImageSection from "./components/ImagesSection";
+import FreeSection from "./components/FreeSection";
 
 
 
@@ -21,11 +23,10 @@ function App() {
   // hover : 100, добавить анимацию к родительскому диву
 
   return (
-    <div className="bg-black h-full">
+    <div className=" bg-black h-full">
       {isLoading ? (
         <div className="transition-opacity duration-1000 ease-out opacity-100 "> 
           <Navbar />
-          <Footer />
         </div>
         
       ) : (
@@ -33,8 +34,11 @@ function App() {
           <Logo size={"w-14 h-14"}/>
         </div>
       )}
-
-      <Section />
+      <div className=" mx-3 lg:mx-5">
+        <Section />
+        <ImageSection />
+        <FreeSection />
+      </div>
       <Footer />
     </div>
   );
