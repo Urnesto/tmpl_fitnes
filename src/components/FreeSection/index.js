@@ -1,13 +1,13 @@
 import { React } from "react";
 const FreeSection = ({}) => {
   return (
-    <div className="flex items-center justify-center my-20 ">
-      <div className="flex flex-col  items-center font-light">
-        <h1 className="text-tmpl-purple  text-5xl">Бесплатное занятие</h1>
+    <div className="flex items-center justify-center mx-5 my-20 ">
+      <div className="flex flex-col justify-center lg:justify-start items-center font-light">
+        <h1 className="text-tmpl-purple  text-4xl">Бесплатное занятие</h1>
         <p className="text-gray-400  text-3xl">подарок от нашего клуба</p>
-        <div className="lg:w-8/12 flex flex-row my-10">
-          <div className="w-full lg:w-2/5 hidden lg:block text-5xl font-normal mx-20">
-            <a className="text-white tracking-wide">
+        <div className="lg:w-8/12 flex flex-col lg:flex-row my-10">
+          <div className="w-full lg:w-2/5  block text-4xl font-normal  my-5 lg:mx-20">
+            <a className="text-gray-400 lg:tracking-wide">
               Вы сможете устроить настоящий
             </a>
             <p className="text-tmpl-purple">тест-драйв клуба</p>
