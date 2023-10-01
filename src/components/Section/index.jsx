@@ -17,6 +17,7 @@ const sectionLinks = [
     title: "Групповые программы",
   },
 ];
+//test
 
 const Section = ({props, toggleModal}) => {
   
