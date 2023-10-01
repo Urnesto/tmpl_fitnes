@@ -13,15 +13,7 @@ const sectionLinks = [
     title: "Единоборства",
   },
   {
-    id: 2,
-    title: "SPA и массаж",
-  },
-  {
     id: 3,
-    title: "Детский фитнес",
-  },
-  {
-    id: 4,
     title: "Групповые программы",
   },
 ];
@@ -42,7 +34,7 @@ const Section = () => {
             </div>
           </div>
           <div className=" lg:row-span-2 lg:col-end-7 flex text-end ">
-            <ul className=" lg:row-span-2  flex  flex-wrap float-left lg:items-end my-5 mx-10 m-auto  justify-center text-center lg:flex-col gap-3 ">
+            <ul className=" lg:row-span-2  flex  flex-wrap float-left lg:items-end my-5 mx-10 m-auto  justify-center text-center lg:flex-col gap-3 lg:gap-5 ">
               {sectionLinks.map((sec, index) => (
                 <ul
                   key={sec.id}

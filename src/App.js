@@ -10,6 +10,7 @@ import InfoSection from "./components/InfoSection";
 
 
 
+
 function App() {
   function PreloaderHandler() {
     setTimeout(() => {
@@ -45,10 +46,7 @@ function App() {
     )}
     
   </div>
-
     
-  );
 }
 
 export default App;
-
