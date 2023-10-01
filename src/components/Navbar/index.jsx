@@ -38,33 +38,31 @@ const navLinks = [
 const numbersPhone = [
   {
     id: 0,
-    phone:"8 499 322 07 55"
+    phone: "8 499 322 07 55",
   },
   {
-    id:1,
-    phone:"8 499 322 07 75"
-  }
-]
+    id: 1,
+    phone: "8 499 322 07 75",
+  },
+];
 
 const Navbar = () => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
   const [isVisibleScroll, setVisibleScroll] = useState(true);
   const toggleScroll = (currentScroll) => {
-    if(currentScroll){
+    if (currentScroll) {
       document.body.style.overflow = "hidden";
-      setVisibleScroll(!currentScroll)
-    } else {   
+      setVisibleScroll(!currentScroll);
+    } else {
       document.body.style.overflow = "auto";
-      setVisibleScroll(!currentScroll)
+      setVisibleScroll(!currentScroll);
     }
-  }
+  };
 
-
-  const functionCollector = (scroll) =>{
-    toggleScroll(scroll)
-    setVisibleBurger(!isVisibleBurger)
-  }
-
+  const functionCollector = (scroll) => {
+    toggleScroll(scroll);
+    setVisibleBurger(!isVisibleBurger);
+  };
 
   return (
     <div className="flex items-center justify-center">
@@ -100,8 +98,8 @@ const Navbar = () => {
               !isVisibleBurger ? "hidden" : "flex"
             } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-full rounded-xl sidebar bg-black h-screen`}
           >
-            <ul className="list-none flex justify-start items-start  flex-col mx-12 ">
-             {/* Nav's button searcher */}
+            <ul className="list-none flex justify-start items-start flex-col h-[90%] mx-12 ">
+              {/* Nav's button searcher */}
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
@@ -112,19 +110,22 @@ const Navbar = () => {
                 </li>
               ))}
               {/* Phone searcher */}
-              <div className="justify-end items-end "> 
-              {numbersPhone.map((phone, index) => (
-                <li
-                  key={phone.id}
-                  className={`font-normal text-lg cursor-pointer
+              <div className="mt-auto w-full">
+                {numbersPhone.map((phone, index) => (
+                  <li
+                    key={phone.id}
+                    className={`font-normal text-lg cursor-pointer
             hover:text-white text-tmpl-purple list-disc list-inside`}
-                >
-                  <a href={`tel:number #${phone.id} `}>{phone.phone}</a>
-                </li>
-              ))}
+                  >
+                    <a href={`tel:number #${phone.id} `}>{phone.phone}</a>
+                  </li>
+                ))}
+                <div>
+                  <Button className bg={"tmpl-purple"}>
+                    Оставить заявку
+                  </Button>
+                </div>
               </div>
-              <Button bg={'tmpl-purple'}>Оставить заявку</Button>
-
             </ul>
           </div>
         </div>
