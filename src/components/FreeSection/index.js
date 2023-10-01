@@ -1,5 +1,5 @@
 import { React } from "react";
-const FreeSection = ({}) => {
+const FreeSection = () => {
   return (
     <div className="flex items-center justify-center mx-5 my-20 ">
       <div className="flex flex-col justify-center lg:justify-start items-center font-light">

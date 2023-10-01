@@ -7,9 +7,6 @@ import ImageSection from "./components/ImagesSection";
 import FreeSection from "./components/FreeSection";
 import ModalWindow from "./components/common/Modal";
 
-
-
-
 function App() {
   function PreloaderHandler() {
     setTimeout(() => {
@@ -25,29 +22,24 @@ function App() {
 
   return (
     <div className=" bg-black h-full ">
-    {isLoading ? (
-      <>
-        <Navbar />
-        <div className=" mx-3 lg:mx-5 ">
-      <Section />
-      <ImageSection />
-      <FreeSection />
+      {isLoading ? (
+        <>
+          <Navbar />
+          <div className=" mx-3 lg:mx-5 ">
+            <Section />
+            <ImageSection />
+            <FreeSection />
+            <ModalWindow />
+          </div>
+          <Footer />
+        </>
+      ) : (
+        <div className="h-screen flex items-center  justify-center animate-pulse ">
+          <Logo size={"w-14 h-14"} />
+        </div>
+      )}
     </div>
-    <Footer />
-    <ModalWindow/>
-      </>
-      
-    ) : (
-      <div className="h-screen flex items-center  justify-center animate-pulse ">
-        <Logo size={"w-14 h-14"} />
-      </div>
-    )}
-    
-  </div>
-
-    
   );
 }
 
 export default App;
-
