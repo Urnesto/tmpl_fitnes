@@ -95,31 +95,37 @@ const Navbar = () => {
           <div
             className={`${
               !isVisibleBurger ? "hidden" : "flex"
-            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-full rounded-xl sidebar bg-black h-screen`}
+            } p-6 bg-black-gradient absolute top-20 right-0  my-2 w-full sidebar bg-black h-full z-100`}
           >
-            <ul className="list-none flex justify-start items-start flex-col h-[90%] mx-12 ">
+            <ul className="list-none flex justify-start items-start flex-col h-[90%] ">
               {/* Nav's button searcher */}
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={`font-normal text-2xl cursor-pointer
-            hover:text-white text-gray-400 my-5`}
+                  className={`font-normal  md:text-2xl sm:text-lg cursor-pointer
+            hover:text-white text-gray-400 sm:my-4 md:my-5`}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
-              {/* Phone searcher */}
-              <ul className="mt-auto w-full list-disc text-tmpl-purple list-inside">
+        
+                   {/* Phone searcher */}
+              <ul className=" mt-auto w-full list-disc text-tmpl-purple list-inside">
                 {numbersPhone.map((phone, index) => (
                   <li
                     key={phone.id}
-                    className={`font-normal text-2xl cursor-pointer
+                    className={`font-normal md:text-2xl sm:text-lg cursor-pointer
              `}
                   >
                     <a href={`tel:number # ${phone.id}`} className="hover:text-gray-400 text-white">{phone.phone}</a>
                   </li>
                 ))}
-                <div className="w-full mt-4">
+                 <ul className=" sm:mt-8 md:mt-8">
+                <li>
+                  <a href="https://yandex.ru/maps/213/moscow/house/lyublinskaya_ulitsa_76k4/Z04YcQRhTEMOQFtvfXp3c3VhbA==/?ll=37.731569%2C55.662928&z=17.13" className="md:text-2xl sm:text-lg text-gray-400 hover:text-white sm:text-xs">Мы находимся по адресу: Люблинская улица, 76к4, Москва, 109382</a> 
+                </li>
+              </ul>
+                <div className="w-full mt-4 ">
                   <Button className bg={"tmpl-purple"}>
                     Оставить заявку
                   </Button>

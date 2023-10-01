@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Section from "./components/Section";
 import ImageSection from "./components/ImagesSection";
 import FreeSection from "./components/FreeSection";
+import ModalWindow from "./components/common/Modal";
 
 
 
@@ -33,6 +34,7 @@ function App() {
       <FreeSection />
     </div>
     <Footer />
+    <ModalWindow/>
       </>
       
     ) : (
