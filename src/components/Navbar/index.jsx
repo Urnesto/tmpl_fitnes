@@ -38,33 +38,31 @@ const navLinks = [
 const numbersPhone = [
   {
     id: 0,
-    phone:"8 499 322 07 55"
+    phone: "8 499 322 07 55",
   },
   {
-    id:1,
-    phone:"8 499 322 07 75"
-  }
-]
+    id: 1,
+    phone: "8 499 322 07 75",
+  },
+];
 
 const Navbar = () => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
   const [isVisibleScroll, setVisibleScroll] = useState(true);
   const toggleScroll = (currentScroll) => {
-    if(currentScroll){
+    if (currentScroll) {
       document.body.style.overflow = "hidden";
-      setVisibleScroll(!currentScroll)
-    } else {   
+      setVisibleScroll(!currentScroll);
+    } else {
       document.body.style.overflow = "auto";
-      setVisibleScroll(!currentScroll)
+      setVisibleScroll(!currentScroll);
     }
-  }
+  };
 
-
-  const functionCollector = (scroll) =>{
-    toggleScroll(scroll)
-    setVisibleBurger(!isVisibleBurger)
-  }
-
+  const functionCollector = (scroll) => {
+    toggleScroll(scroll);
+    setVisibleBurger(!isVisibleBurger);
+  };
 
   return (
     <div className="flex items-center justify-center">
@@ -93,38 +91,40 @@ const Navbar = () => {
             className="w-6 h-6 object-contain"
             onClick={() => functionCollector(isVisibleScroll)}
           />
-
           {/* Sidebar */}
           <div
             className={`${
               !isVisibleBurger ? "hidden" : "flex"
             } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-full rounded-xl sidebar bg-black h-screen`}
           >
-            <ul className="list-none flex justify-start  items-start flex-col mx-12 ">
-             {/* Nav's button searcher */}
+            <ul className="list-none flex justify-start items-start flex-col h-[90%] mx-12 ">
+              {/* Nav's button searcher */}
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={`font-normal text-lg cursor-pointer
-            hover:text-white text-gray-400`}
+                  className={`font-normal text-2xl cursor-pointer
+            hover:text-white text-gray-400 my-5`}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
               {/* Phone searcher */}
-              <div className="justify-end items-end flex-1 "> 
-              {numbersPhone.map((phone, index) => (
-                <li
-                  key={phone.id}
-                  className={`font-normal text-lg cursor-pointer
-            hover:text-white text-tmpl-purple list-disc list-inside`}
-                >
-                  <a href={`tel:number #${phone.id} `}>{phone.phone}</a>
-                </li>
-              ))}
-              </div>
-              <Button bg={'tmpl-purple'}>Оставить заявку</Button>
-
+              <ul className="mt-auto w-full list-disc text-tmpl-purple list-inside">
+                {numbersPhone.map((phone, index) => (
+                  <li
+                    key={phone.id}
+                    className={`font-normal text-2xl cursor-pointer
+             `}
+                  >
+                    <a href={`tel:number # ${phone.id}`} className="hover:text-gray-400 text-white">{phone.phone}</a>
+                  </li>
+                ))}
+                <div className="w-full mt-4">
+                  <Button className bg={"tmpl-purple"}>
+                    Оставить заявку
+                  </Button>
+                </div>
+              </ul>
             </ul>
           </div>
         </div>

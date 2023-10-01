@@ -57,7 +57,9 @@ const Footer = () => {
             <div className="flex flex-row items-center justify-center lg:items-start my-5 lg:justify-normal">
               <Logo size={"w-12 h-12"} />
             </div>
-            <Button  bg={"tmpl-purple"} > оставить заявку </Button>
+            <div className="flex items-center justify-center  lg:items-start lg:justify-normal">
+              <Button bg={"tmpl-purple"}> оставить заявку </Button>
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-18 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
             <div className="text-left mx-5 lg:mx-0">

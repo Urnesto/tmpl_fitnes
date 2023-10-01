@@ -34,7 +34,7 @@ const FreeSection = ({}) => {
                 </div>
               </div>
               <div className="block">
-                <span className="text-2xl font-light text-white ">
+                <span className="text-2xl font-light text-white">
                   Позаниматься на новейших тренажерах
                 </span>
               </div>
