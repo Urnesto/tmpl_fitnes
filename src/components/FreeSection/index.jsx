@@ -3,16 +3,16 @@ const FreeSection = () => {
   return (
     <div className="flex items-center justify-center mx-5 my-20 ">
       <div className="flex flex-col justify-center lg:justify-start items-center font-light">
-        <h1 className="text-tmpl-purple  text-4xl">Бесплатное занятие</h1>
-        <p className="text-gray-400  text-3xl">подарок от нашего клуба</p>
+        <h1 className="text-tmpl-purple text-center text-4xl">Бесплатное занятие</h1>
+        <p className="text-gray-400  text-center text-3xl">подарок от нашего клуба</p>
         <div className="lg:w-8/12 flex flex-col lg:flex-row my-10">
-          <div className="w-full lg:w-2/5  flex flex-col text-4xl font-medium items-center justify-center my-5 lg:mx-20">
-            <span className="text-gray-400 lg:tracking-wide">
+          <div className="w-full lg:w-2/5  flex flex-col pb-4 text-2xl font-normal items-center justify-center my-5 lg:mx-20">
+            <span className="text-gray-400 lg:tracking-wide text-center">
               Вы сможете устроить настоящий
             </span>
-            <p className="text-tmpl-purple">тест-драйв клуба</p>
+            <p className="text-tmpl-purple text-center">тест-драйв клуба</p>
           </div>
-          <div className="lg:w-1/3 flex flex-col items-start space-y-10">
+          <div className="lg:w-1/3 flex flex-col mt-4 items-start space-y-10">
             <div className="flex flex-row lg:flex-col items-center lg:items-start">
               <div className="relative ">
                 <div className="absolute inset-0 bg-tmpl-purple blur-xl  rounded-full z-0"></div>

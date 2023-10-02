@@ -10,21 +10,39 @@ import InfoSection from "./components/InfoSection";
 import useModal from "./hooks/useModal";
 import useTypeModal from "./hooks/useTypeModal";
 import SliderSection from "./components/SliderSection";
-
 import CardSection from "./components/cardSection";
+import InfoModal from "./components/common/InfoModal";
+import trainer from "./assets/images/trainers/14.jpg";
+import { trainerData } from "./lib/trainersData";
+import usePhotoModal from "./hooks/usePhotoModal";
+
+
 
 function App() {
   const [isToggleModal, setToggleModal] = useModal();
   const [isLoading, setLoading] = useState(false);
   const [TypeModal, setTypeModal] = useTypeModal();
+  const [isPhotoModal, setPhotoModal] = useModal()
+  const [PhotoModalType, setPhotoModalType] = useTypeModal();
+
   useEffect(() => {
     PreloaderHandler();
   });
-
   function PreloaderHandler() {
     setTimeout(() => {
       setLoading(true);
     }, 1500);
+  }
+
+  const PhotoModalHandler = (modalType) => {
+    console.log(modalType)
+    if (modalType) {
+      setPhotoModalType(modalType);
+      setPhotoModal(true);
+      return;
+    } 
+
+      setPhotoModal(false);
   }
 
   const ModalHandler = (modalType) => {
@@ -33,10 +51,14 @@ function App() {
       setTypeModal(modalType);
       setToggleModal(true);
       return;
-    } else {
+    } 
+
       setToggleModal(false);
-    }
-  };
+  }
+
+
+  // const PhotoModalHandler = (obj) => {
+  // }
 
   // hover : 100, добавить анимацию к родительскому диву
 
@@ -47,11 +69,12 @@ function App() {
           <Navbar modalHandler={ModalHandler} />
           <div className=" mx-3 lg:mx-5 ">
             <Section modalHandler={ModalHandler} />
+           {isPhotoModal && !isToggleModal ? <InfoModal handler={PhotoModalHandler} data={PhotoModalType}/>  : <></>}  
             <ImageSection />
             <FreeSection />
             <InfoSection />
-            <div className=" my-10 lg:my-22 ">
-            <SliderSection />
+            <div className=" my-10 lg:my-22  ">
+            <SliderSection data={trainerData} btnhandler={PhotoModalHandler} />
             </div>
             <CardSection />
           </div>

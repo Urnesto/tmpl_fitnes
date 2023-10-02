@@ -3,7 +3,7 @@ const InfoSection = ({modalHandler}) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className=" w-11/12 lg:w-7/12 h-fit flex items-center flex-col justify-center">
-        <div className="bg-gradient-to-br my-28 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl">
+        <div className="bg-gradient-to-br my-14 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl">
           <div className="w-full h-52 flex flex-col items-center justify-center lg:flex-row lg:justify-around gap-3 rounded-3xl bg-tmpl-black">
             <div className="flex text-center items-center text-white text-cl md:text-2xl lg:text-3xl">
               Зарегистрируетесь на бесплатное занятие
@@ -13,7 +13,7 @@ const InfoSection = ({modalHandler}) => {
             </div>
           </div>
         </div>
-        <div className="bg-gradient-to-br my-5 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl">
+        <div className="bg-gradient-to-br my-14 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl">
           <div className="w-full h-fit lg:h-52 flex  flex-col p-10 rounded-3xl bg-tmpl-black">
             <div className="flex  flex-col ">
               <h1 className="text-tmpl-purple text-2xl lg:text-5xl">

@@ -3,8 +3,9 @@ import PhotoCard from "../Reusable/PhotoCard"
 import trainer from "../../assets/images/trainers/14.jpg";
 
 
+const SliderSection = (props) => {
 
-const SliderSection = () => {
+    const { data, btnhandler } = props
 
     return (
         <div className=" flex justify-center items-center   ">
@@ -14,17 +15,16 @@ const SliderSection = () => {
                 <span className="text-5xl text-tmpl-purple">команда профессионалов</span>
                 <p className="text-lg text-gray-600 ml-8">Каждый является специалистом в своей сфере и имеет все необходимые документы</p>
                 <div className="flex">
-                    <PhotoCard img={trainer} />
-                    <PhotoCard img={trainer} />
-                    <PhotoCard  img={trainer}/>
-                    <PhotoCard  img={trainer}/>
+                {data.map((e, index) => (
+                    <PhotoCard key={index} id={e.id} img={e.img} data={e} handler={btnhandler}  />
+          ))}                        
                 </div>
                 </div>
             <div className="items-center justify-center lg:hidden">
                 <div className="flex flex-col">
-                <PhotoCard img={trainer} />
-                    <PhotoCard img={trainer} />
-                    <PhotoCard  img={trainer}/>
+                {data.map((e, index) => (
+                    <PhotoCard key={index} id={e.id} img={e.img} data={e} handler={btnhandler}  />
+          ))}     
                 </div>
               
             </div>

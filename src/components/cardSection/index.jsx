@@ -41,7 +41,7 @@ const cardSection = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="w-7/12 h-fit bg-red-700">
+      <div className="w-7/12 h-fit ">
         {/*  */}
 
         {cardData.map((obj) => (
