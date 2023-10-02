@@ -10,8 +10,12 @@ const useModal = () => {
     function toggle(){
         if(isShowing){
             document.body.style.overflow = "auto";
+            setIsShowing(!isShowing);
+        }else{
+            document.body.style.overflow = "hidden";
+            setIsShowing(!isShowing)
         }
-        setIsShowing(!isShowing);
+        
     }
 
 
