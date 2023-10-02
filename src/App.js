@@ -9,6 +9,8 @@ import ModalWindow from "./components/common/Modal";
 import InfoSection from "./components/InfoSection";
 import useModal from "./hooks/useModal";
 import useTypeModal from "./hooks/useTypeModal";
+import SliderSection from "./components/SliderSection";
+
 
 function App() {
   const [isToggleModal, setToggleModal] = useModal();
@@ -47,6 +49,9 @@ function App() {
             <ImageSection />
             <FreeSection />
             <InfoSection />
+            <div className=" my-10 lg:my-24 ">
+            <SliderSection />
+            </div>
           </div>
           <Footer modalHandler={ModalHandler} />
           {isToggleModal ? (
