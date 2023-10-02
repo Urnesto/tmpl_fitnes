@@ -19,25 +19,21 @@ const sectionLinks = [
 ];
 //test
 
-const Section = ({modalHandler}) => {
-  
-  const ButtonHandler = (condition) =>{
-    condition? AbobnimentBuy(condition) : freeTrainigButton()  
-  }
+const Section = ({ modalHandler }) => {
+  const ButtonHandler = (condition) => {
+    condition ? AbobnimentBuy(condition) : freeTrainigButton();
+  };
 
-
-
-  const AbobnimentBuy = (modalType) =>{
+  const AbobnimentBuy = (modalType) => {
     modalHandler(modalType);
-  }
+  };
 
   const freeTrainigButton = () => {
     window.scroll({
       top: window.screen.height * 1.5,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
-
 
   return (
     <div className="flex items-center justify-center">
@@ -49,8 +45,12 @@ const Section = ({modalHandler}) => {
             </h1>
             <div className="uppercase e lg:text-3xl text-center lg:text-start text-tmpl-purple">
               Premium
-              <a className="text-tmpl-gray-100 mx-2" href="#">фитнес в москве</a>
-              <a  href="#" className="text-white block">БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ</a>
+              <a className="text-tmpl-gray-100 mx-2" href="#">
+                фитнес в москве
+              </a>
+              <a href="#" className="text-white block">
+                БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ
+              </a>
             </div>
           </div>
           <div className=" lg:row-span-2 lg:col-end-7 flex text-end ">
@@ -72,9 +72,17 @@ const Section = ({modalHandler}) => {
           </div>
           <div>
             <div className="flex gap-4 flex-col  xl:flex-row">
-              <div className="flex items-center justify-center lg:mx-0 mx-5 gap-4 lg:items-start lg:justify-normal">
-                <Button handler={()=>ButtonHandler('wantbuy')} bg={"tmpl-purple"}> купить абонемент </Button>
-                <Button handler={()=> ButtonHandler()} border={"2"}>бесплатное занятие </Button>
+              <div className="flex items-center justify-center lg:mx-0 lg:my-10 mx-5 gap-4 lg:items-start lg:justify-normal">
+                <Button
+                  handler={() => ButtonHandler("wantbuy")}
+                  bg={"tmpl-purple"}
+                >
+                  {" "}
+                  купить абонемент{" "}
+                </Button>
+                <Button handler={() => ButtonHandler()} border={"2"}>
+                  бесплатное занятие{" "}
+                </Button>
               </div>
             </div>
             <div className="mx-5 lg:mx-0 flex items-center flex-row">
