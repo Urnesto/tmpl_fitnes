@@ -47,6 +47,8 @@ const numbersPhone = [
   },
 ];
 
+
+//test
 const Navbar = ({ modalHandler }) => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
   const [isVisibleScroll, setVisibleScroll] = useState(true);
