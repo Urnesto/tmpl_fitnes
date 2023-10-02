@@ -11,6 +11,7 @@ import useModal from "./hooks/useModal";
 import useTypeModal from "./hooks/useTypeModal";
 import SliderSection from "./components/SliderSection";
 
+import CardSection from "./components/cardSection";
 
 function App() {
   const [isToggleModal, setToggleModal] = useModal();
@@ -52,6 +53,7 @@ function App() {
             <div className=" my-10 lg:my-24 ">
             <SliderSection />
             </div>
+            <CardSection />
           </div>
           <Footer modalHandler={ModalHandler} />
           {isToggleModal ? (
