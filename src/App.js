@@ -9,6 +9,7 @@ import ModalWindow from "./components/common/Modal";
 import InfoSection from "./components/InfoSection";
 import useModal from "./hooks/useModal";
 import useTypeModal from "./hooks/useTypeModal";
+import CardSection from "./components/cardSection";
 
 function App() {
   const [isToggleModal, setToggleModal] = useModal();
@@ -47,6 +48,7 @@ function App() {
             <ImageSection />
             <FreeSection />
             <InfoSection />
+            <CardSection />
           </div>
           <Footer modalHandler={ModalHandler} />
           {isToggleModal ? (
