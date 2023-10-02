@@ -48,7 +48,7 @@ function App() {
             <FreeSection />
             <InfoSection />
           </div>
-          <Footer />
+          <Footer modalHandler={ModalHandler} />
           {isToggleModal ? (
             <ModalWindow
               CurrentType={TypeModal}
