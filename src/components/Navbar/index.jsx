@@ -5,7 +5,6 @@ import { Logo } from "../Reusable/logo";
 import { Button } from "../Reusable/Button";
 import useModal from "../../hooks/useModal";
 
-
 const navLinks = [
   {
     id: "home",
@@ -48,10 +47,10 @@ const numbersPhone = [
   },
 ];
 
-const Navbar = ({modalHandler}) => {
+const Navbar = ({ modalHandler }) => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
   const [isVisibleScroll, setVisibleScroll] = useState(true);
-  
+
   const toggleScroll = (currentScroll) => {
     if (currentScroll) {
       document.body.style.overflow = "hidden";
@@ -63,13 +62,10 @@ const Navbar = ({modalHandler}) => {
   };
 
   const functionCollector = (isScroll) => {
-   // isScroll - current condition scroll
+    // isScroll - current condition scroll
     toggleScroll(isScroll);
     setVisibleBurger(!isVisibleBurger);
   };
-  
-
- 
 
   return (
     <div className="flex items-center justify-center">
@@ -115,8 +111,8 @@ const Navbar = ({modalHandler}) => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
-        
-                   {/* Phone searcher */}
+
+              {/* Phone searcher */}
               <ul className=" mt-auto w-full list-disc text-tmpl-purple list-inside">
                 {numbersPhone.map((phone, index) => (
                   <li
@@ -124,16 +120,31 @@ const Navbar = ({modalHandler}) => {
                     className={`font-normal md:text-2xl sm:text-lg cursor-pointer
              `}
                   >
-                    <a href={`tel:number # ${phone.id}`} className="hover:text-gray-400 text-white">{phone.phone}</a>
+                    <a
+                      href={`tel:number # ${phone.id}`}
+                      className="hover:text-gray-400 text-white"
+                    >
+                      {phone.phone}
+                    </a>
                   </li>
                 ))}
-                 <ul className=" sm:mt-8 md:mt-8">
-                <li>
-                  <a href="https://yandex.ru/maps/213/moscow/?ll=37.731599%2C55.662936&mode=poi&poi%5Bpoint%5D=37.731344%2C55.663121&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D91033436195&z=19.52" className="md:text-2xl sm:text-lg text-gray-400 hover:text-white sm:text-xs">Мы находимся по адресу: Люблинская улица, 76к4, Москва, 109382</a> 
-                </li>
-              </ul>
+                <ul className=" sm:mt-8 md:mt-8">
+                  <li>
+                    <a
+                      href="https://yandex.ru/maps/213/moscow/?ll=37.731599%2C55.662936&mode=poi&poi%5Bpoint%5D=37.731344%2C55.663121&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D91033436195&z=19.52"
+                      className="md:text-2xl sm:text-lg text-gray-400 hover:text-white sm:text-xs"
+                    >
+                      Мы находимся по адресу: Люблинская улица, 76к4, Москва,
+                      109382
+                    </a>
+                  </li>
+                </ul>
                 <div className="w-full mt-4 ">
-                  <Button handler={()=> modalHandler('feedback')} className bg={"tmpl-purple"}>
+                  <Button
+                    handler={() => modalHandler("feedback")}
+                    className
+                    bg={"tmpl-purple"}
+                  >
                     Оставить заявку
                   </Button>
                 </div>
