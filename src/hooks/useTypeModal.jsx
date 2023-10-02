@@ -4,13 +4,12 @@ import { useState } from "react";
 const useTypeModal = () => {
    
    //Types for TypeModal : {
-    //* string: feedback || wantBuy
+    //* string: feedback || wantBuy || signUpfree || undefined
     //}
     const [TypeModal, setTypeModal] = useState('feedback')
     
-    function toggle(arg="feedback"){
-        console.log('Успешно отработала');
-       setTypeModal(arg)
+    function toggle(type){
+       setTypeModal(type)
     }
 
 

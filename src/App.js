@@ -24,7 +24,7 @@ function App() {
   }
 
   const ModalHandler = (modalType) =>{
-    // MODALTYPE = 'feedback' || 'wantbuy' || undefined
+    // MODALTYPE = 'feedback' || 'wantbuy' || 'freeSign' undefined
     if(modalType){
       setTypeModal(modalType)
       setToggleModal(true)
@@ -48,10 +48,10 @@ function App() {
         <div className=" mx-3 lg:mx-5 ">
       <Section modalHandler={ModalHandler}  />
       <ImageSection />
-      <FreeSection />
-      <InfoSection />
+      <FreeSection modalHandler={ModalHandler}/>
+      <InfoSection  modalHandler={ModalHandler}/>
     </div>
-    <Footer />
+    <Footer modalHandler={ModalHandler} />
       {isToggleModal? <ModalWindow CurrentType={TypeModal}  modalHandler={setToggleModal} />: <> </>   }
       </>
       

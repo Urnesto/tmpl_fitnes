@@ -6,10 +6,11 @@ const useModal = () => {
    //Types for TypeModal : {
     //* string: feedback || wantBuy
     //}
-    const [TypeModal, setTypeModal] = useState('feedback')
     
     function toggle(){
-        console.log('Успешно отработала');
+        if(isShowing){
+            document.body.style.overflow = "auto";
+        }
         setIsShowing(!isShowing);
     }
 

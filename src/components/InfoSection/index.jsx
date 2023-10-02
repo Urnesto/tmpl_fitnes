@@ -1,5 +1,5 @@
 import { Button } from "../Reusable/Button";
-const InfoSection = () => {
+const InfoSection = ({modalHandler}) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className=" w-11/12 lg:w-7/12 h-fit flex items-center flex-col justify-center">
@@ -9,7 +9,7 @@ const InfoSection = () => {
               Зарегистрируетесь на бесплатное занятие
             </div>
             <div className="flex items-center justify-center w-full lg:w-fit mx-5 ">
-              <Button bg={"tmpl-purple"}> купить абонемент </Button>
+              <Button handler={()=> modalHandler('freeSign')} bg={"tmpl-purple"}> Записаться </Button>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ const InfoSection = () => {
               направленности, помогут его достичь
             </div>
             <div className="flex items-center lg:items-start justify-center lg:justify-start">
-              <Button bg={"tmpl-purple"}>перейти к пакетам </Button>
+              <Button handler={()=>console.log('infosection')} bg={"tmpl-purple"}>перейти к пакетам </Button>
             </div>
           </div>
         </div>

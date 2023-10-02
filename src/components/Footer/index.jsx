@@ -48,7 +48,7 @@ const adresLinks = [
   { id: "mobile_app", title: "Мобильное приложение" },
   { id: "contacts", title: "Контакты" },
 ];
-const Footer = () => {
+const Footer = ({modalHandler}) => {
   return (
     <footer className="bg-tmpl-gray-50 ">
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
@@ -58,7 +58,7 @@ const Footer = () => {
               <Logo size={"w-12 h-12"} />
             </div>
             <div className="flex items-center justify-center  lg:items-start lg:justify-normal">
-              <Button bg={"tmpl-purple"}> оставить заявку </Button>
+              <Button handler={()=> modalHandler('feedback')} bg={"tmpl-purple"}> оставить заявку </Button>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-18 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">

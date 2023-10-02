@@ -3,14 +3,15 @@ import modalImage from "./modal.png";
 import { Button } from "../../Reusable/Button";
 
 const ModalWindow = ({modalHandler, CurrentType}) => {
-     
+    const test= CurrentType   
+    console.log(test)
 
   return (
     <div  className='fixed inset-0 bg-gray-400 bg-opacity-25 backdrop-blur-sm flex items-center justify-center'>
       <div className="bg-black  rounded w-1/3 h-3/5">
       <img src={modalImage} alt="" className="w-screen pb-4 " />
         <h1 className="font-semibold text-center text-4xl text-white">
-          Оставить заявку
+          Оставить заявку {test}
         </h1>
         <p className="text-center text-gray-400 text-4xl mb-5">
           на обратный звонок
