@@ -50,7 +50,7 @@ function App() {
             <ImageSection />
             <FreeSection />
             <InfoSection />
-            <div className=" my-10 lg:my-24 ">
+            <div className=" my-10 lg:my-22 ">
             <SliderSection />
             </div>
             <CardSection />
