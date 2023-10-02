@@ -7,42 +7,52 @@ import ImageSection from "./components/ImagesSection";
 import FreeSection from "./components/FreeSection";
 import ModalWindow from "./components/common/Modal";
 import InfoSection from "./components/InfoSection";
-
+import useModal from "./hooks/useModal";
+import useTypeModal from "./hooks/useTypeModal";
 function App() {
+  const [isToggleModal, setToggleModal] = useModal()
+  const [isLoading, setLoading] = useState(false);
+  const [ TypeModal, setTypeModal] = useTypeModal()
+  useEffect(() => {
+    PreloaderHandler();
+  });
+  
   function PreloaderHandler() {
     setTimeout(() => {
       setLoading(true);
     }, 1500);
   }
 
-  const [isLoading, setLoading] = useState(false);
-  useEffect(() => {
-    PreloaderHandler();
-  });
-  // hover : 100, добавить анимацию к родительскому диву
-  const [isToggleModal, setToggleModal] = useState(false)
-
-  const ToggleModal = () => {
-    setToggleModal(!isToggleModal)
+  const ModalHandler = (modalType) =>{
+    // MODALTYPE = 'feedback' || 'wantbuy' || undefined
+    if(modalType){
+      setTypeModal(modalType)
+      setToggleModal(true)
+      return;
+    } else{
+      setToggleModal(false)
+    }
   }
 
-  useEffect(() => {
-    PreloaderHandler();
-  });
+
+  // hover : 100, добавить анимацию к родительскому диву
+
+
+
 
   return (
     <div className=" bg-black h-full ">
     {isLoading ? (
       <>
-        <Navbar toggleModal={ToggleModal} />
+        <Navbar modalHandler={ModalHandler} />
         <div className=" mx-3 lg:mx-5 ">
-      <Section toggleModal={ToggleModal} />
+      <Section modalHandler={ModalHandler}  />
       <ImageSection />
       <FreeSection />
       <InfoSection />
     </div>
     <Footer />
-      {isToggleModal? <ModalWindow toggleModal={ToggleModal} />: <> </>   }
+      {isToggleModal? <ModalWindow CurrentType={TypeModal}  modalHandler={setToggleModal} />: <> </>   }
       </>
       
     ) : (

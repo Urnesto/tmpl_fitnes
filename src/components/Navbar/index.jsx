@@ -3,6 +3,8 @@ import close from "../../assets/icons/close.svg";
 import menu from "../../assets/icons/menu.svg";
 import { Logo } from "../Reusable/logo";
 import { Button } from "../Reusable/Button";
+import useModal from "../../hooks/useModal";
+
 
 const navLinks = [
   {
@@ -46,9 +48,10 @@ const numbersPhone = [
   },
 ];
 
-const Navbar = ({toggleModal}) => {
+const Navbar = ({modalHandler}) => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
   const [isVisibleScroll, setVisibleScroll] = useState(true);
+  
   const toggleScroll = (currentScroll) => {
     if (currentScroll) {
       document.body.style.overflow = "hidden";
@@ -59,15 +62,14 @@ const Navbar = ({toggleModal}) => {
     }
   };
 
-  const functionCollector = (scroll) => {
-    toggleScroll(scroll);
+  const functionCollector = (isScroll) => {
+   // isScroll - current condition scroll
+    toggleScroll(isScroll);
     setVisibleBurger(!isVisibleBurger);
   };
   
 
-  const test = () => {
-
-  }
+ 
 
   return (
     <div className="flex items-center justify-center">
@@ -88,7 +90,7 @@ const Navbar = ({toggleModal}) => {
           ))}
         </ul>
         <li className="font-medium list-none mx-10 cursor-pointer underline underline-offset-8 decoration-tmpl-purple text-base text-white hover:text-tmpl-purple">
-          <a className="" onClick={()=>toggleModal()}>Позвонить</a>
+          <a href="tel:+1-303-499-7111">Позвонить</a>
         </li>
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
@@ -131,7 +133,7 @@ const Navbar = ({toggleModal}) => {
                 </li>
               </ul>
                 <div className="w-full mt-4 ">
-                  <Button handler={()=> toggleModal()} className bg={"tmpl-purple"}>
+                  <Button handler={()=> modalHandler('feedback')} className bg={"tmpl-purple"}>
                     Оставить заявку
                   </Button>
                 </div>

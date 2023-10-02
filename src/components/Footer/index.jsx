@@ -113,7 +113,7 @@ const Footer = () => {
             <p className="text-sm text-gray-500">
               <a
                 className="inline-block text-gray-400 underline transition hover:text-white"
-                href="/"
+                href="https://tmplfitness.ru/policy"
               >
                 Политика конфиденциальности
               </a>

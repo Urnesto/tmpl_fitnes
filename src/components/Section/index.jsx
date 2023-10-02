@@ -19,16 +19,16 @@ const sectionLinks = [
 ];
 //test
 
-const Section = ({props, toggleModal}) => {
+const Section = ({modalHandler}) => {
   
-  
-  const ButtonHandler = (arg) =>{
-    arg? AbobnimentBuy() : freeTrainigButton()  
-  
+  const ButtonHandler = (condition) =>{
+    condition? AbobnimentBuy(condition) : freeTrainigButton()  
   }
 
-  const AbobnimentBuy = () =>{
-    toggleModal();
+
+
+  const AbobnimentBuy = (modalType) =>{
+    modalHandler(modalType);
   }
 
   const freeTrainigButton = () => {
@@ -73,7 +73,7 @@ const Section = ({props, toggleModal}) => {
           <div>
             <div className="flex gap-4 flex-col  xl:flex-row">
               <div className="flex items-center justify-center lg:mx-0 mx-5 gap-4 lg:items-start lg:justify-normal">
-                <Button handler={()=>ButtonHandler('1')} bg={"tmpl-purple"}> купить абонемент </Button>
+                <Button handler={()=>ButtonHandler('wantbuy')} bg={"tmpl-purple"}> купить абонемент </Button>
                 <Button handler={()=> ButtonHandler()} border={"2"}>бесплатное занятие </Button>
               </div>
             </div>

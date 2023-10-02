@@ -1,10 +1,9 @@
 import { useState } from "react";
 import modalImage from "./modal.png";
-const ModalWindow = ({toggleModal}) => {
-  
-    const ButtonHandler = () =>{
-        toggleModal()
-    }
+import { Button } from "../../Reusable/Button";
+
+const ModalWindow = ({modalHandler, CurrentType}) => {
+     
 
   return (
     <div  className='fixed inset-0 bg-gray-400 bg-opacity-25 backdrop-blur-sm flex items-center justify-center'>
@@ -37,8 +36,12 @@ const ModalWindow = ({toggleModal}) => {
           />
         </div>
         <div className="text-center">
-          <button className="px-5 py-2  bg-gray-700 rounded">Sign in</button>
-             <button className="px-5 py-2  bg-gray-700 rounded" onClick={()=> ButtonHandler()}> X </button>
+        <Button handler={()=> modalHandler('wantBuy')} className bg={"tmpl-purple"}>
+                   Want Buy
+            </Button>
+          <Button handler={()=> modalHandler()} className bg={"tmpl-purple"}>
+                   X
+                  </Button>
         </div>
       </div>
     </div>
