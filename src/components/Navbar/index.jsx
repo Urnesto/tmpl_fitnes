@@ -19,10 +19,6 @@ const navLinks = [
     title: "Услуги",
   },
   {
-    id: "schedule",
-    title: "Расписание",
-  },
-  {
     id: "pricing",
     title: "Стоимость",
   },
@@ -46,7 +42,6 @@ const numbersPhone = [
     phone: "8 499 322 07 75",
   },
 ];
-
 
 //test
 const Navbar = ({ modalHandler }) => {
@@ -83,7 +78,7 @@ const Navbar = ({ modalHandler }) => {
             hover:text-white text-gray-400
                ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>

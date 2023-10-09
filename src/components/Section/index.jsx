@@ -17,8 +17,6 @@ const sectionLinks = [
     title: "Групповые программы",
   },
 ];
-//test
-
 const Section = ({ modalHandler }) => {
   const ButtonHandler = (condition) => {
     condition ? AbobnimentBuy(condition) : freeTrainigButton();
@@ -45,12 +43,12 @@ const Section = ({ modalHandler }) => {
             </h1>
             <div className="uppercase e lg:text-3xl text-center lg:text-start text-tmpl-purple">
               Premium
-              <a className="text-tmpl-gray-100 mx-2" href="#">
+              <p className="text-tmpl-gray-100 mx-2" href="#">
                 фитнес в москве
-              </a>
-              <a href="#" className="text-white block">
+              </p>
+              <p href="#" className="text-white block">
                 БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ
-              </a>
+              </p>
             </div>
           </div>
           <div className=" lg:row-span-2 lg:col-end-7 flex text-end ">
@@ -64,7 +62,7 @@ const Section = ({ modalHandler }) => {
                     className="flex justify-center items-center w-full  h-12
                    text-white rounded text-center p-8 text-sm lg:text-xl bg-tmpl-gray-150"
                   >
-                    <a>{sec.title}</a>
+                    <p>{sec.title}</p>
                   </li>
                 </ul>
               ))}

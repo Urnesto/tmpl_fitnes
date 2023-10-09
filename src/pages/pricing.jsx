@@ -1,8 +1,8 @@
 import { React } from "react";
-import { Button } from "../Reusable/Button";
-import leftIcon from "../../assets/icons/leftIcon.svg";
-import rightIcon from "../../assets/icons/rightIcon.svg";
-const cardSection = ({ dataCard, btnhandler }) => {
+import { Button } from "../components/Reusable/Button";
+import leftIcon from "../assets/icons/leftIcon.svg";
+import rightIcon from "../assets/icons/rightIcon.svg";
+const pricing = ({ dataCard, btnhandler }) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="w-full relative lg:w-7/12 h-fit ">
@@ -53,4 +53,4 @@ const cardSection = ({ dataCard, btnhandler }) => {
     </div>
   );
 };
-export default cardSection;
+export default pricing;
