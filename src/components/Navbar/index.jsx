@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import close from "../../assets/icons/close.svg";
 import menu from "../../assets/icons/menu.svg";
 import { Logo } from "../Reusable/logo";
 import { Button } from "../Reusable/Button";
 import useModal from "../../hooks/useModal";
-
+import { Link } from "react-scroll";
 const navLinks = [
   {
     id: "home",
@@ -15,15 +15,11 @@ const navLinks = [
     title: "O фитнес клубе",
   },
   {
-    id: "product",
-    title: "Услуги",
-  },
-  {
     id: "pricing",
     title: "Стоимость",
   },
   {
-    id: "mobile_app",
+    id: "",
     title: "Мобильное приложение",
   },
   {
@@ -43,7 +39,6 @@ const numbersPhone = [
   },
 ];
 
-//test
 const Navbar = ({ modalHandler }) => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
   const [isVisibleScroll, setVisibleScroll] = useState(true);
@@ -63,7 +58,6 @@ const Navbar = ({ modalHandler }) => {
     toggleScroll(isScroll);
     setVisibleBurger(!isVisibleBurger);
   };
-
   return (
     <div className="flex items-center justify-center">
       <nav className="w-11/12 lg:w-8/12 max-w-7xl flex items-center justify-center py-6 navbar">
@@ -78,7 +72,15 @@ const Navbar = ({ modalHandler }) => {
             hover:text-white text-gray-400
                ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             >
-              <a href={`${nav.id}`}>{nav.title}</a>
+              <Link
+                activeClass="active"
+                smooth={true}
+                offset={50}
+                duration={1500}
+                to={nav.id}
+              >
+                <p>{nav.title}</p>
+              </Link>
             </li>
           ))}
         </ul>
@@ -105,7 +107,15 @@ const Navbar = ({ modalHandler }) => {
                   className={`font-normal  md:text-2xl sm:text-lg cursor-pointer
             hover:text-white text-gray-400 sm:my-4 md:my-5`}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link
+                    activeClass="active"
+                    smooth={true}
+                    offset={50}
+                    duration={1500}
+                    to={nav.id}
+                  >
+                    <p>{nav.title}</p>
+                  </Link>
                 </li>
               ))}
 

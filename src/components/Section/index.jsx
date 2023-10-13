@@ -1,7 +1,6 @@
 import { Button } from "../Reusable/Button";
 import { React } from "react";
 import logonfs from "../../assets/images/logonfs.png";
-import { Link, BrowserRouter } from "react-router-dom";
 
 const sectionLinks = [
   {
@@ -35,7 +34,7 @@ const Section = ({ modalHandler }) => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className=" w-full lg:w-8/12 h-fit my-10 max-w-7xl">
+      <div id="home" className=" w-full lg:w-8/12 h-fit my-10 max-w-7xl">
         <div className="grid lg:grid-cols-1 ">
           <div className="row-span-1 ">
             <h1 className="text-white my-3 uppercase text-center lg:text-start text-3xl lg:text-6xl font-bold">
@@ -84,17 +83,15 @@ const Section = ({ modalHandler }) => {
               </div>
             </div>
             <div className="mx-5 lg:mx-0 flex items-center flex-row">
-              <img className="w-14 h-14" src={logonfs}></img>
+              <img className="w-14 h-14" src={logonfs} />
               <div className="text-tmpl-gray-100 text-sm flex flex-col my-3 lg:my-10 mx-3">
-                <a>TMPL Fitness</a>
+                <p>TMPL Fitness</p>
                 <div className="flex flex-row">
-                  <a>Вход &nbsp;</a>
+                  <p>Вход &nbsp;</p>
                   <div className="underline pointer">
-                    <BrowserRouter>
-                      <Link to="https://nationalfitness.ru/" target="_blank">
-                        Национальное фитнес-сообщество
-                      </Link>
-                    </BrowserRouter>
+                    <a href="https://nationalfitness.ru/" target="_blank">
+                      Национальное фитнес-сообщество
+                    </a>
                   </div>
                 </div>
               </div>

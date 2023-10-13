@@ -2,14 +2,12 @@ import { useState } from "react";
 import modalImage from "./modal.png";
 import { Button } from "../../Reusable/Button";
 
-const ModalWindow = ({modalHandler, CurrentType}) => {
-    const test= CurrentType   
-    console.log(test)
-
+const ModalWindow = ({ modalHandler, CurrentType }) => {
+  const test = CurrentType;
   return (
-    <div  className='fixed inset-0 bg-gray-400 bg-opacity-25 backdrop-blur-sm flex items-center justify-center'>
-      <div className="bg-black  rounded w-1/3 h-3/5">
-      <img src={modalImage} alt="" className="w-screen pb-4 " />
+    <div className="fixed inset-0  bg-gray-400 bg-opacity-25 backdrop-blur-sm flex items-center justify-center">
+      <div className="bg-black   rounded w-full mx-5 lg:mx-0 lg:w-1/3 lg:h-fit">
+        <img src={modalImage} alt="" className="w-screen pb-4 " />
         <h1 className="font-semibold text-center text-4xl text-white">
           Оставить заявку {test}
         </h1>
@@ -37,14 +35,22 @@ const ModalWindow = ({modalHandler, CurrentType}) => {
           />
         </div>
         <div className="text-center">
-        <Button handler={()=> modalHandler('wantBuy')} className bg={"tmpl-purple"}>
-                   Want Buy
-            </Button>
-          <Button handler={()=> modalHandler()} className bg={"tmpl-purple"}>
-                   X
-                  </Button>
+          <Button
+            handler={() => modalHandler("ОПЛАТА")}
+            className
+            bg={"tmpl-purple"}
+          >
+            Want Buy
+          </Button>
         </div>
       </div>
+      <button
+        onClick={() => modalHandler()}
+        className="text-white absolute m-4 top-0 right-0"
+        bg={"tmpl-purple"}
+      >
+        X
+      </button>
     </div>
   );
 };

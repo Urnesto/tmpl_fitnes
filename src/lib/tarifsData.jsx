@@ -11,7 +11,7 @@ export const cardData = [
   [
     {
       id: "2",
-      title: "FULL",
+      title: "FULL1",
       time: "1 месяц",
       price: "3400 рублей",
       subAdress: [
@@ -26,7 +26,7 @@ export const cardData = [
   [
     {
       id: "3",
-      title: "FULL",
+      title: "FULL2",
       time: "3 месяца",
       price: "8100 рублей",
       subAdress: [
@@ -42,7 +42,7 @@ export const cardData = [
   [
     {
       id: "4",
-      title: "FULL",
+      title: "FULL3",
       time: "6 месяцев",
       price: "13500 рублей",
       subAdress: [

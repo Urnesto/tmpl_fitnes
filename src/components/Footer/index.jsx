@@ -2,7 +2,7 @@ import React from "react";
 import { Logo } from "../Reusable/logo";
 import logonfs from "../../assets/images/logonfs.png";
 import { Button } from "../Reusable/Button";
-
+import { Link } from "react-scroll";
 const homeLinks = [
   {
     id: "home",
@@ -11,10 +11,6 @@ const homeLinks = [
   {
     id: "about",
     title: "O фитнес клубе",
-  },
-  {
-    id: "product",
-    title: "Услуги",
   },
   {
     id: "pricing",
@@ -34,16 +30,13 @@ const adresLinks = [
     subAdress: ["Люблинская улица, 76к4, Москва, 1093824"],
   },
   { id: "mobile_app", title: "Мобильное приложение" },
-  { id: "contacts", title: "Контакты" },
+  {
+    id: "contacts",
+    title: "Контакты",
+    phone: ["8 499 322 07 55", "8 499 322 07 75"],
+  },
 ];
 const Footer = ({ modalHandler }) => {
-  const freeTrainigButton = () => {
-    window.scroll({
-      top: window.screen.height * 1.5,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <footer className="bg-tmpl-gray-50 ">
       <div className="mx-auto  max-w-screen-xl px-4 pb-6  sm:px-6 lg:px-8 pt-10">
@@ -53,10 +46,7 @@ const Footer = ({ modalHandler }) => {
               <Logo size={"w-12 h-12"} />
             </div>
             <div className="flex items-center justify-center  lg:items-start lg:justify-normal">
-              <Button
-                handler={() => modalHandler("feedback")}
-                bg={"tmpl-purple"}
-              >
+              <Button handler={() => modalHandler()} bg={"tmpl-purple"}>
                 {" "}
                 оставить заявку{" "}
               </Button>
@@ -67,14 +57,22 @@ const Footer = ({ modalHandler }) => {
               <ul className="space-y-4 text-sm">
                 {homeLinks.map((home, index) => (
                   <li key={home.id}>
-                    <p className="text-gray-400 transition hover:text-white">
-                      {home.title}
-                    </p>
+                    <Link
+                      activeClass="active"
+                      smooth={true}
+                      offset={50}
+                      duration={1500}
+                      to={home.id}
+                    >
+                      <p className="text-gray-400 transition cursor-pointer hover:text-white">
+                        {home.title}
+                      </p>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="text-left  mx-10 lg:mx-0">
+            <div className="text-left  mx-15 lg:mx-0">
               <ul className="space-y-3  text-sm">
                 {adresLinks.map((obj) => (
                   <div key={obj.id}>
@@ -83,15 +81,22 @@ const Footer = ({ modalHandler }) => {
                     </p>
                     {obj.subAdress && (
                       <ul className="list-disc  text-tmpl-purple list-inside  text-xs">
-                        {obj.subAdress.map((hobby, hobbyIndex) => (
-                          <li key={hobbyIndex}>
+                        {obj.subAdress.map((adres, adresIndex) => (
+                          <li key={adresIndex}>
                             <a
                               href="https://yandex.ru/maps/213/moscow/?ll=37.731599%2C55.662936&mode=poi&poi%5Bpoint%5D=37.731344%2C55.663121&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D91033436195&z=19.52"
                               className="text-gray-400"
                             >
-                              {hobby}
+                              {adres}
                             </a>
                           </li>
+                        ))}
+                      </ul>
+                    )}
+                    {obj.phone && (
+                      <ul className="list-disc  text-tmpl-purple list-inside  text-">
+                        {obj.phone.map((tel, telIndex) => (
+                          <li key={telIndex}>{tel}</li>
                         ))}
                       </ul>
                     )}

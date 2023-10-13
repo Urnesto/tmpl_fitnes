@@ -1,7 +1,8 @@
 import { Button } from "../Reusable/Button";
-const InfoSection = ({modalHandler}) => {
+import { Link } from "react-scroll";
+const InfoSection = ({ modalHandler }) => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div id="about" className="flex flex-col items-center justify-center">
       <div className=" w-11/12 lg:w-7/12 h-fit flex items-center flex-col justify-center">
         <div className="bg-gradient-to-br my-14 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl">
           <div className="w-full h-52 flex flex-col items-center justify-center lg:flex-row lg:justify-around gap-3 rounded-3xl bg-tmpl-black">
@@ -9,7 +10,10 @@ const InfoSection = ({modalHandler}) => {
               Зарегистрируетесь на бесплатное занятие
             </div>
             <div className="flex items-center justify-center w-full lg:w-fit mx-5 ">
-              <Button handler={()=> modalHandler('freeSign')} bg={"tmpl-purple"}> Записаться </Button>
+              <Button handler={() => modalHandler()} bg={"tmpl-purple"}>
+                {" "}
+                оставить заявку{" "}
+              </Button>
             </div>
           </div>
         </div>
@@ -40,14 +44,26 @@ const InfoSection = ({modalHandler}) => {
                 Как это работает?
               </h1>
             </div>
-            {/* re */}
             <div className="text-gray-400 my-4 text-md lg:text-md">
               Вы можете приобрести пакет услуг наиболее подходящий под ваш
               желаемый результат, а команда наших специалистов, каждый своей
               направленности, помогут его достичь
             </div>
             <div className="flex items-center lg:items-start justify-center lg:justify-start">
-              <Button handler={()=>console.log('infosection')} bg={"tmpl-purple"}>перейти к пакетам </Button>
+              <Button
+                handler={() => console.log("infosection")}
+                bg={"tmpl-purple"}
+              >
+                <Link
+                  activeClass="active"
+                  smooth={true}
+                  offset={50}
+                  duration={1500}
+                  to={"pricing"}
+                >
+                  перейти к пакетам{" "}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

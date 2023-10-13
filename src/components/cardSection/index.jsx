@@ -2,9 +2,9 @@ import { React } from "react";
 import { Button } from "../Reusable/Button";
 import leftIcon from "../../assets/icons/leftIcon.svg";
 import rightIcon from "../../assets/icons/rightIcon.svg";
-const cardSection = ({ dataCard, btnhandler }) => {
+const cardSection = ({ dataCard, btnhandler, modalHandler }) => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div id="pricing" className="flex flex-col items-center justify-center">
       <div className="w-full relative lg:w-7/12 h-fit ">
         <button
           className="absolute w-10 h-10 left-0 top-1/2  "
@@ -20,6 +20,8 @@ const cardSection = ({ dataCard, btnhandler }) => {
         </button>
         {dataCard.map((obj) => (
           <div
+            data={obj}
+            id={obj.id}
             key={obj.id}
             className="bg-gradient-to-br my-5 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl"
           >
@@ -43,7 +45,13 @@ const cardSection = ({ dataCard, btnhandler }) => {
                 <p className="text-white text-xl lg:text-3xl text-center ">
                   {obj.price}
                 </p>
-                <Button bg={"tmpl-purple"}>оставить заявку </Button>
+                <Button
+                  handler={() => modalHandler(obj.title)}
+                  bg={"tmpl-purple"}
+                >
+                  {}
+                  оставить заявку{" "}
+                </Button>
               </div>
             </div>
           </div>

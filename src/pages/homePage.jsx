@@ -13,8 +13,8 @@ import SliderSection from "../components/SliderSection";
 import CardSection from "../components/cardSection";
 import InfoModal from "../components/common/InfoModal";
 import { trainerData } from "../lib/trainersData";
-import usePhotoModal from "../hooks/usePhotoModal";
 import { cardData } from "../lib/tarifsData";
+import RequestSection from "../components/RequestSection";
 
 function Home() {
   const [isToggleModal, setToggleModal] = useModal();
@@ -42,7 +42,6 @@ function Home() {
   }
 
   const PhotoModalHandler = (modalType) => {
-    console.log(modalType);
     if (modalType) {
       setPhotoModalType(modalType);
       setPhotoModal(true);
@@ -56,6 +55,7 @@ function Home() {
     // MODALTYPE = 'feedback' || 'wantbuy' || undefined
     if (modalType) {
       setTypeModal(modalType);
+      console.log(modalType);
       setToggleModal(true);
       return;
     }
@@ -76,7 +76,6 @@ function Home() {
       }
     }
   };
-
   const trainerHandler = (arg) => {
     if (arg) {
       if (indexTrainer < trainerData.length - 1) {
@@ -107,11 +106,9 @@ function Home() {
             ) : (
               <></>
             )}
-
-            <priceComponent />
             <ImageSection />
             <FreeSection />
-            <InfoSection />
+            <InfoSection modalHandler={ModalHandler} />
             <div className=" my-10 lg:my-22  ">
               <SliderSection
                 data={currentTrainer}
@@ -119,8 +116,13 @@ function Home() {
                 sliderhandler={trainerHandler}
               />
             </div>
-            <CardSection dataCard={currentCard} btnhandler={cardHandler} />
+            <CardSection
+              dataCard={currentCard}
+              modalHandler={ModalHandler}
+              btnhandler={cardHandler}
+            />
           </div>
+          <RequestSection />
           <Footer modalHandler={ModalHandler} />
           {isToggleModal ? (
             <ModalWindow
