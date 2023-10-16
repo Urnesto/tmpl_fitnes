@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 const InfoSection = ({ modalHandler }) => {
   return (
     <div id="about" className="flex flex-col items-center justify-center">
-      <div className=" w-11/12 lg:w-7/12 h-fit flex items-center flex-col justify-center">
+      <div className=" w-11/12 z-5  lg:w-7/12 h-fit flex items-center flex-col justify-center">
         <div className="bg-gradient-to-br my-14 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl">
           <div className="w-full h-52 flex flex-col items-center justify-center lg:flex-row lg:justify-around gap-3 rounded-3xl bg-tmpl-black">
             <div className="flex text-center items-center text-white text-cl md:text-2xl lg:text-3xl">

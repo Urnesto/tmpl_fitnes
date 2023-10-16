@@ -29,7 +29,6 @@ const adresLinks = [
     title: "Мы находимся по адресу",
     subAdress: ["Люблинская улица, 76к4, Москва, 1093824"],
   },
-  { id: "mobile_app", title: "Мобильное приложение" },
   {
     id: "contacts",
     title: "Контакты",
@@ -38,7 +37,7 @@ const adresLinks = [
 ];
 const Footer = ({ modalHandler }) => {
   return (
-    <footer className="bg-tmpl-gray-50 ">
+    <footer id="contact" className="bg-tmpl-gray-50 ">
       <div className="mx-auto  max-w-screen-xl px-4 pb-6  sm:px-6 lg:px-8 pt-10">
         <div className="grid grid-cols-1  lg:grid-cols-3">
           <div>

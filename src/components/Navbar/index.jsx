@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import close from "../../assets/icons/close.svg";
 import menu from "../../assets/icons/menu.svg";
 import { Logo } from "../Reusable/logo";
@@ -17,10 +17,6 @@ const navLinks = [
   {
     id: "pricing",
     title: "Стоимость",
-  },
-  {
-    id: "",
-    title: "Мобильное приложение",
   },
   {
     id: "contact",
@@ -54,7 +50,6 @@ const Navbar = ({ modalHandler }) => {
   };
 
   const functionCollector = (isScroll) => {
-    // isScroll - current condition scroll
     toggleScroll(isScroll);
     setVisibleBurger(!isVisibleBurger);
   };
@@ -90,8 +85,9 @@ const Navbar = ({ modalHandler }) => {
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={isVisibleBurger ? close : menu}
+            alt="burger"
             className="w-6 h-6 object-contain"
-            onClick={() => functionCollector(isVisibleScroll)}
+            onClick={() => functionCollector(toggleScroll)}
           />
           {/* Sidebar */}
           <div
@@ -108,6 +104,7 @@ const Navbar = ({ modalHandler }) => {
             hover:text-white text-gray-400 sm:my-4 md:my-5`}
                 >
                   <Link
+                    onClick={() => functionCollector()}
                     activeClass="active"
                     smooth={true}
                     offset={50}

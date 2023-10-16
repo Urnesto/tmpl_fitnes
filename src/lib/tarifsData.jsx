@@ -1,15 +1,6 @@
 export const cardData = [
   [
     {
-      id: "1",
-      title: "ONCE",
-      time: "Разовое посещение",
-      price: "690 рублей",
-      subAdress: ["690 рублей"],
-    },
-  ],
-  [
-    {
       id: "2",
       title: "FULL1",
       time: "1 месяц",
@@ -71,6 +62,15 @@ export const cardData = [
         "30 дней заморозки",
         "Посещение без ограничений 24/7",
       ],
+    },
+  ],
+  [
+    {
+      id: "6",
+      title: "ONCE",
+      time: "Разовое посещение",
+      price: "690 рублей",
+      subAdress: ["690 рублей"],
     },
   ],
 ];

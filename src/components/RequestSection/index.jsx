@@ -1,7 +1,31 @@
-import { React } from "react";
+import { useState } from "react";
 import { Button } from "../Reusable/Button";
 
 const RequestSection = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isValid, setIsValid] = useState(false);
+  const [name, setName] = useState("");
+
+  const handlePhoneNumberChange = (e) => {
+    let inputValue = e.target.value.replace(/\s/g, "");
+    if (!inputValue.startsWith("+7")) {
+      inputValue = "+7" + inputValue;
+    }
+    setPhoneNumber(inputValue);
+    const phoneRegex = /^(\+\d{11}|\d{11})$/;
+
+    setIsValid(phoneRegex.test(inputValue));
+  };
+
+  const handleNameChange = (e) => {
+    const inputValue = e.target.value;
+    setName(inputValue);
+  };
+
+  const isPhoneNumberValid = (number) => {
+    return /^(\+\d{11}|\d{11})$/.test(number);
+  };
+  const isButtonDisabled = !(name && isPhoneNumberValid(phoneNumber));
   return (
     <div className="flex items-center justify-center">
       <div className="w-10/12 my-5 mb-20  lg:w-7/12 h-fit">
@@ -18,15 +42,28 @@ const RequestSection = () => {
         <div className="flex items-center flex-col lg:flex-row">
           <input
             type="text"
+            value={name}
+            onChange={handleNameChange}
             className=" bg-transparent h-10 w-full lg:w-56 my-3 lg:my-0 text-gray-400 border-b-2 border-tmpl-purple  rounded "
             placeholder="Имя"
           />
           <input
             type="tel"
             className=" bg-transparent h-10 w-full lg:w-56 my-3 lg:my-0 text-gray-400 border-b-2 border-tmpl-purple mx-10 rounded "
-            placeholder="Phone"
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
+            placeholder="Номер телефона"
           />
-          <Button bg={"tmpl-purple"}>ОТПРАВИТЬ</Button>
+          <div className="my-5 lg:my-0 mx-0 lg:mx-3 text-sm ">
+            {isValid ? (
+              <p style={{ color: "green" }}>Номер в веден верно</p>
+            ) : (
+              <p style={{ color: "red" }}>В веденный номер неправильный</p>
+            )}
+          </div>
+          <Button disabled={isButtonDisabled} bg={"tmpl-purple"}>
+            ОТПРАВИТЬ
+          </Button>
           <div className="flex-col  mx-10 text-gray-400 text-xs">
             <p>Нажимая на кнопку вы соглашаетесь</p>
             <p>
