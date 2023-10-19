@@ -37,14 +37,14 @@
 
 <div align="center"> 
   <img src="Screenshot_1.png" alt="screenshot" />
-  <img src="![Alt text](image-3.png)" alt="screenshot" />
+    <img src="Screenshot_2.png" alt="screenshot" />
 </div>
 
 #Mobile
 
 <div align="center">
-    <img src="![Alt text](image.png)" alt="screenshot">
-    <img src="![Alt text](image-1.png)" alt="screenshot">
+      <img src="Screenshot_3.png" alt="screenshot" />
+      <img src="Screenshot_4.png" alt="screenshot" />
 </div>
 <!-- TechStack -->
 
