@@ -7,6 +7,7 @@
   LIVE DEMO https://tmpl-fitnes-git-main-urnesto.vercel.app/
   </a>
 <br />
+</div>
 <!-- Table of Contents -->
 # :notebook_with_decorative_cover: Table of Contents
 
