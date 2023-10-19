@@ -3,18 +3,16 @@ const FreeSection = () => {
   return (
     <div className="flex items-center justify-center mx-5 my-20 ">
       <div className="flex flex-col justify-center lg:justify-start items-center font-light">
-        <h1 className="text-tmpl-purple text-center text-4xl">
-          Бесплатное занятие
-        </h1>
+        <h1 className="text-tmpl-purple text-center text-4xl">Free training</h1>
         <p className="text-gray-400  text-center text-3xl">
-          подарок от нашего клуба
+          gift from our club
         </p>
         <div className="lg:w-8/12 flex flex-col lg:flex-row my-10">
           <div className="w-full lg:w-2/5  flex flex-col pb-4 text-2xl font-normal items-center justify-center my-5 lg:mx-20">
             <span className="text-gray-400 lg:tracking-wide text-center">
-              Вы сможете устроить настоящий
+              You'll be able to set up a real
             </span>
-            <p className="text-tmpl-purple text-center">тест-драйв клуба</p>
+            <p className="text-tmpl-purple text-center">club test drive</p>
           </div>
           <div className="lg:w-1/3 flex flex-col mt-4 items-start space-y-10">
             <div className="flex flex-row lg:flex-col items-center lg:items-start">
@@ -25,8 +23,8 @@ const FreeSection = () => {
                 </div>
               </div>
               <div className="block">
-                <span className="text-2xl font-light text-white ">
-                  Посмотреть одними из первых клуб внутри
+                <span className="text-xl font-light text-white ">
+                  To see some of the first club inside
                 </span>
               </div>
             </div>
@@ -38,8 +36,8 @@ const FreeSection = () => {
                 </div>
               </div>
               <div className="block">
-                <span className="text-2xl font-light text-white">
-                  Позаниматься на новейших тренажерах
+                <span className="text-xl font-light text-white">
+                  Work out on the latest fitness equipment
                 </span>
               </div>
             </div>
@@ -51,8 +49,8 @@ const FreeSection = () => {
                 </div>
               </div>
               <div>
-                <span className="text-2xl font-light text-white ">
-                  Насладиться качественным сервисом
+                <span className="text-xl font-light text-white ">
+                  Enjoy quality service
                 </span>
               </div>
             </div>
@@ -64,10 +62,10 @@ const FreeSection = () => {
                 </div>
               </div>
               <div>
-                <span className="text-2xl font-light text-white ">
-                  У вас появится возможность пользоваться {""}
+                <span className="text-xl font-light text-white ">
+                  You'll be able to use {""}
                   <p className="text-tmpl-purple">
-                    всеми услугами клуба абсолютно бесплатно
+                    all club services absolutely free of charge
                   </p>
                 </span>
               </div>

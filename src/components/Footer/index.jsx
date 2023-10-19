@@ -3,38 +3,10 @@ import { Logo } from "../Reusable/logo";
 import logonfs from "../../assets/images/logonfs.png";
 import { Button } from "../Reusable/Button";
 import { Link } from "react-scroll";
-const homeLinks = [
-  {
-    id: "home",
-    title: "Главная",
-  },
-  {
-    id: "about",
-    title: "O фитнес клубе",
-  },
-  {
-    id: "pricing",
-    title: "Стоимость",
-  },
-];
-const templLInks = [
-  { id: "templ", title: "ООО «Тэмпл»" },
-  { id: "Tin", title: "ИНН 9726033443" },
-  { id: "Ogrn", title: "ОГРН 1227700919863" },
-  { id: "Director", title: "Ген. Директор Зайцев Игорь Алексеевич" },
-];
-const adresLinks = [
-  {
-    id: "adres",
-    title: "Мы находимся по адресу",
-    subAdress: ["Люблинская улица, 76к4, Москва, 1093824"],
-  },
-  {
-    id: "contacts",
-    title: "Контакты",
-    phone: ["8 499 322 07 55", "8 499 322 07 75"],
-  },
-];
+import { templLInks } from "../../lib/footerTemplData";
+import { adresLinks } from "../../lib/footerAdressData";
+import { homeLinks } from "../../lib/footerHomeData";
+
 const Footer = ({ modalHandler }) => {
   return (
     <footer id="contact" className="bg-tmpl-gray-50 ">
@@ -45,9 +17,12 @@ const Footer = ({ modalHandler }) => {
               <Logo size={"w-12 h-12"} />
             </div>
             <div className="flex items-center justify-center  lg:items-start lg:justify-normal">
-              <Button handler={() => modalHandler()} bg={"tmpl-purple"}>
+              <Button
+                handler={() => modalHandler("feedback")}
+                bg={"tmpl-purple"}
+              >
                 {" "}
-                оставить заявку{" "}
+                Left a request{" "}
               </Button>
             </div>
           </div>
@@ -123,23 +98,20 @@ const Footer = ({ modalHandler }) => {
             <p className="text-sm text-gray-500">
               <a
                 className="inline-block text-gray-400 underline transition hover:text-white"
-                href="https://tmplfitness.ru/policy"
+                href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-constitutes-data-processing_en"
               >
-                Политика конфиденциальности
+                Privacy Policy
               </a>
               <span>&middot;</span>
               <a className="inline-block text-gray-500 text-xs" href="/">
-                Информация об услугах и ценах на сайте ООО «Тэмпл» не является
-                публичной офертой и носит ознакомительный характер
+                The information about services and prices on the website of
+                Templ Ltd. is not a public offer. is not a public offer and is
+                of an introductory nature
               </a>
             </p>
             <div className="text-gray-400 mt-4 text-sm sm:order-last sm:mt-0 ">
-              <p>
-                &copy; 2023 Общество с ограниченной ответственностью «Тэмпл»
-              </p>
-              <p>
-                Общество с ограниченной ответственностью «Зеленая территория»
-              </p>
+              <p>&copy; 2023 Limited Liability Company Temple</p>
+              <p>Lorem ipum</p>
             </div>
           </div>
         </div>

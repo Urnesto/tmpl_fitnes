@@ -5,35 +5,8 @@ import { Logo } from "../Reusable/logo";
 import { Button } from "../Reusable/Button";
 import useModal from "../../hooks/useModal";
 import { Link } from "react-scroll";
-const navLinks = [
-  {
-    id: "home",
-    title: "Главная",
-  },
-  {
-    id: "about",
-    title: "O фитнес клубе",
-  },
-  {
-    id: "pricing",
-    title: "Стоимость",
-  },
-  {
-    id: "contact",
-    title: "Контакты",
-  },
-];
-
-const numbersPhone = [
-  {
-    id: 0,
-    phone: "8 499 322 07 55",
-  },
-  {
-    id: 1,
-    phone: "8 499 322 07 75",
-  },
-];
+import { navLinks } from "../../lib/navbarData";
+import { numbersPhone } from "../../lib/navbarPhoneData";
 
 const Navbar = ({ modalHandler }) => {
   const [isVisibleBurger, setVisibleBurger] = useState(false);
@@ -80,7 +53,7 @@ const Navbar = ({ modalHandler }) => {
           ))}
         </ul>
         <li className="font-medium list-none mx-10 cursor-pointer underline underline-offset-8 decoration-tmpl-purple text-base text-white hover:text-tmpl-purple">
-          <a href="tel:+1-303-499-7111">Позвонить</a>
+          <a href="tel:+1-303-499-7111">Call for us</a>
         </li>
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
@@ -138,8 +111,7 @@ const Navbar = ({ modalHandler }) => {
                       href="https://yandex.ru/maps/213/moscow/?ll=37.731599%2C55.662936&mode=poi&poi%5Bpoint%5D=37.731344%2C55.663121&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D91033436195&z=19.52"
                       className="md:text-2xl sm:text-lg text-gray-400 hover:text-white sm:text-xs"
                     >
-                      Мы находимся по адресу: Люблинская улица, 76к4, Москва,
-                      109382
+                      Our adres lorem ipum
                     </a>
                   </li>
                 </ul>
@@ -149,7 +121,7 @@ const Navbar = ({ modalHandler }) => {
                     className
                     bg={"tmpl-purple"}
                   >
-                    Оставить заявку
+                    Left a request
                   </Button>
                 </div>
               </ul>

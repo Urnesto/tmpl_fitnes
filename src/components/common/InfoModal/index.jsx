@@ -14,7 +14,7 @@ const InfoModal = (props) => {
             <h1 className="text-white text-2xl">{data.name}</h1>
             <h3 className="text-white my-3">{data.experience}</h3>
             <div className="flex flex-col pt-4">
-              <p className="text-xl mb-3">Специализация</p>
+              <p className="text-xl mb-3">Specialisation</p>
               {data.specialization.map((spec, index) => (
                 <li className="list-disc  text-tmpl-purple list-inside">
                   <span className="text-sm md:text-base lg:text-lg text-gray-400">
@@ -22,7 +22,7 @@ const InfoModal = (props) => {
                   </span>
                 </li>
               ))}
-              <p className="text-xl my-3">Достижения</p>
+              <p className="text-xl my-3">Achievements</p>
               {data.achievements.map((ach, index) => (
                 <li className="list-disc text-tmpl-purple list-inside">
                   <span className="text-sm md:text-base lg:text-lg text-gray-400">
@@ -30,7 +30,7 @@ const InfoModal = (props) => {
                   </span>
                 </li>
               ))}
-              <p className="text-xl my-3">Образование</p>
+              <p className="text-xl my-3">Education</p>
               {data.education.map((edu, index) => (
                 <li className="list-disc text-tmpl-purple list-inside">
                   <span className="text-sm md:text-base lg:text-lg text-gray-400">

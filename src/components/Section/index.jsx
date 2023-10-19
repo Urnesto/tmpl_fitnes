@@ -1,21 +1,8 @@
 import { Button } from "../Reusable/Button";
 import { React } from "react";
 import logonfs from "../../assets/images/logonfs.png";
+import { sectionLinks } from "../../lib/sectionData";
 
-const sectionLinks = [
-  {
-    id: 0,
-    title: "Тренажерный зал",
-  },
-  {
-    id: 1,
-    title: "Единоборства",
-  },
-  {
-    id: 3,
-    title: "Групповые программы",
-  },
-];
 const Section = ({ modalHandler }) => {
   const ButtonHandler = (condition) => {
     condition ? AbobnimentBuy(condition) : freeTrainigButton();
@@ -43,10 +30,10 @@ const Section = ({ modalHandler }) => {
             <div className="uppercase e lg:text-3xl text-center lg:text-start text-tmpl-purple">
               Premium
               <p className="text-tmpl-gray-100 mx-2" href="#">
-                фитнес в москве
+                fitness
               </p>
               <p href="#" className="text-white block">
-                БЕСПЛАТНОЕ ПРОБНОЕ ЗАНЯТИЕ
+                FREE TRIAL LESSON
               </p>
             </div>
           </div>
@@ -71,14 +58,14 @@ const Section = ({ modalHandler }) => {
             <div className="flex gap-4 flex-col  xl:flex-row">
               <div className="flex items-center justify-center lg:mx-0 lg:my-10 mx-5 gap-4 lg:items-start lg:justify-normal">
                 <Button
-                  handler={() => ButtonHandler("wantbuy")}
+                  handler={() => ButtonHandler("feedback")}
                   bg={"tmpl-purple"}
                 >
                   {" "}
-                  купить абонемент{" "}
+                  buy a subscription{" "}
                 </Button>
                 <Button handler={() => ButtonHandler()} border={"2"}>
-                  бесплатное занятие{" "}
+                  free trail lesson{" "}
                 </Button>
               </div>
             </div>
@@ -87,10 +74,13 @@ const Section = ({ modalHandler }) => {
               <div className="text-tmpl-gray-100 text-sm flex flex-col my-3 lg:my-10 mx-3">
                 <p>TMPL Fitness</p>
                 <div className="flex flex-row">
-                  <p>Вход &nbsp;</p>
+                  <p>Enter &nbsp;</p>
                   <div className="underline pointer">
-                    <a href="https://nationalfitness.ru/" target="_blank">
-                      Национальное фитнес-сообщество
+                    <a
+                      href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-constitutes-data-processing_en"
+                      target="_blank"
+                    >
+                      National fitness community
                     </a>
                   </div>
                 </div>

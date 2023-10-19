@@ -7,12 +7,15 @@ const InfoSection = ({ modalHandler }) => {
         <div className="bg-gradient-to-br my-14 from-tmpl-purple via-purple-900 to-black w-full p-0.5 rounded-3xl">
           <div className="w-full h-52 flex flex-col items-center justify-center lg:flex-row lg:justify-around gap-3 rounded-3xl bg-tmpl-black">
             <div className="flex text-center items-center text-white text-cl md:text-2xl lg:text-3xl">
-              Зарегистрируетесь на бесплатное занятие
+              Register for a free class
             </div>
             <div className="flex items-center justify-center w-full lg:w-fit mx-5 ">
-              <Button handler={() => modalHandler()} bg={"tmpl-purple"}>
+              <Button
+                handler={() => modalHandler("feedback")}
+                bg={"tmpl-purple"}
+              >
                 {" "}
-                оставить заявку{" "}
+                Left a request{" "}
               </Button>
             </div>
           </div>
@@ -21,19 +24,19 @@ const InfoSection = ({ modalHandler }) => {
           <div className="w-full h-fit lg:h-52 flex  flex-col p-10 rounded-3xl bg-tmpl-black">
             <div className="flex  flex-col ">
               <h1 className="text-tmpl-purple text-2xl lg:text-5xl">
-                Инновационный
+                Innovative
               </h1>
-              <a className=" text-md lg:text-xl text text-white">
-                подход к фитнесу
-              </a>
+              <p className=" text-md lg:text-xl text text-white">
+                fitness approach
+              </p>
             </div>
             <div className="my-3 text-sm lg:text-md">
-              <a className="text-white">Мы предлагаем результат</a>
-              <a className="text-gray-400">, а не услуги</a>
+              <a className="text-white">We offer results</a>
+              <a className="text-gray-400">, not services</a>
             </div>
             <div className="text-gray-400 text-sm lg:text-md">
-              В нашем фитнес клубе создаются персонализированные программы
-              тренировок индивидуально под каждого клиента
+              In our fitness club we create personalised training programmes
+              individualised training programmes for each client
             </div>
           </div>
         </div>
@@ -41,13 +44,13 @@ const InfoSection = ({ modalHandler }) => {
           <div className="w-full h-fit  flex  flex-col p-10 rounded-3xl bg-tmpl-black">
             <div className="flex  flex-col ">
               <h1 className="text-gray-400 text-2xl lg:text-5xl">
-                Как это работает?
+                How it works?
               </h1>
             </div>
             <div className="text-gray-400 my-4 text-md lg:text-md">
-              Вы можете приобрести пакет услуг наиболее подходящий под ваш
-              желаемый результат, а команда наших специалистов, каждый своей
-              направленности, помогут его достичь
+              You can purchase a package of services that best suits your
+              desired result. desired result, and a team of our specialists,
+              each with their own will help you achieve it
             </div>
             <div className="flex items-center lg:items-start justify-center lg:justify-start">
               <Button
@@ -61,7 +64,7 @@ const InfoSection = ({ modalHandler }) => {
                   duration={1500}
                   to={"pricing"}
                 >
-                  перейти к пакетам{" "}
+                  go to packages{" "}
                 </Link>
               </Button>
             </div>

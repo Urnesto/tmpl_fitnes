@@ -9,14 +9,14 @@ const SliderSection = (props) => {
       <div className="lg:w-7/12  w-10/12 h-fit flex justify-center items-center  sm:block ">
         <div className="flex  flex-col items-center justify-center  ">
           <h1 className="text-2xl lg:text-5xl text-gray-600">
-            Вас доведет до результата{" "}
+            You'll get results{" "}
           </h1>
           <span className="text-2xl lg:text-5xl text-tmpl-purple">
-            команда профессионалов
+            team of professionals
           </span>
           <p className="text-base lg:text-lg text-gray-600 ml-8">
-            Каждый является специалистом в своей сфере и имеет все необходимые
-            документы
+            Each is an expert in his or her field and has all the necessary
+            documents
           </p>
           <div className="w-full lg:w-1/2 flex justify-center relative">
             {data.map((e, index) => (

@@ -50,7 +50,7 @@ const cardSection = ({ dataCard, btnhandler, modalHandler }) => {
                   bg={"tmpl-purple"}
                 >
                   {}
-                  оставить заявку{" "}
+                  leave a request{" "}
                 </Button>
               </div>
             </div>
