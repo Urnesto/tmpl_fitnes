@@ -36,7 +36,7 @@
 #Desktop
 
 <div align="center"> 
-  <img src="![Alt text](image-2.png)" alt="screenshot" />
+  <img src="Screenshot_1.png" alt="screenshot" />
   <img src="![Alt text](image-3.png)" alt="screenshot" />
 </div>
 
