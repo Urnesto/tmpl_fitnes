@@ -78,7 +78,7 @@ const ModalWindow = ({ modalHandler, CurrentType }) => {
       <div className="bg-black max-w-6xl  rounded-2xl w-full mx-5 lg:mx-0 lg:w-1/3 lg:h-fit">
         <img src={modalImage} alt="" className="w-screen pb-4 " />
         <h1 className="font-semibold text-center text-2xl lg:text-4xl text-white">
-          Leave an application{test}
+          Leave an application
         </h1>
         <p className="text-center text-gray-400 text-2xl lg:text-4xl mb-5">
           for callback
@@ -142,7 +142,7 @@ const ModalWindow = ({ modalHandler, CurrentType }) => {
               className
               bg={"tmpl-purple"}
             >
-              ОПЛАТА
+              Click to process
             </Button>
           </div>
         }
